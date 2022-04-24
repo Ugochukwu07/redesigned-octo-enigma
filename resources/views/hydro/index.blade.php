@@ -1,5 +1,9 @@
 @extends('hydro.layouts.app')
 
+@section('title')
+    Welcome
+@endsection
+
 @section('content')
 <!--Start Hero-->
 <section class="hero-section hero-bg-bg1 bg-gradient dark-bg1">
@@ -193,7 +197,7 @@
 
 
     <!--Start Portfolio-->
-    <section class="portfolio-section pad-tb">
+    <section class="portfolio-section pad-tb" id="portfolio">
         <div class="container">
             <div class="row justify-content-center ">
                 <div class="col-lg-8">

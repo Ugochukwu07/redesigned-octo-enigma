@@ -3,7 +3,7 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8"/>
-    <title>Niwax - Web Design &amp; Digital Marketing Agency HTML Template</title>
+    <title>@yield('title') | Hydrogen Technologies</title>
     <meta name="description" content="Creative Agency, Marketing Agency Template">
     <meta name="keywords" content="Creative Agency, Marketing Agency">
     <meta name="author" content="rajesh-doot">
