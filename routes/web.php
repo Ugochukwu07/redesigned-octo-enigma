@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\Hydro\PagesControllers;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\Hydro\PagesControllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +34,11 @@ Route::prefix('hydro')->name('hydro.')->group(function () {
         Route::get('/digital-marketing', [PagesControllers::class, 'digital'])->name('digital');
     });
 
+});
+
+//Artisan
+Route::get('/artisan/{command}', function($command){
+    $output = [];
+    Artisan::call($command, $output);
+    dd($output);
 });
