@@ -63,5 +63,8 @@
     <script src="{{ asset('assets/open/') }}/js/dark-mode.js"></script>
     <!--common script file-->
     <script src="{{ asset('assets/open/') }}/js/main.js"></script>
+    <script>
+        $('h2.nav-title').html('Hydrogen Technologies')
+    </script>
 </body>
 </html>

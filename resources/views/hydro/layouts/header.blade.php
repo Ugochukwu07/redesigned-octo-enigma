@@ -14,7 +14,7 @@
                         <li class="sbmenu"><a href="{{ route('hydro.home') }}#services" class="menu-links">Our Services</a></li>
                         <li class="sbmenu"><a href="{{ route('hydro.team') }}" class="menu-links">Our Teams</a></li>
                         <li class="sbmenu"><a href="{{ route('hydro.home') }}#portfolio" class="menu-links">Portfolio</a></li>
-                        <li class="sbmenu"><a href="{{ route('hydro.contact') }}" class="menu-links">contact</a></li>
+                        <li class="sbmenu"><a href="{{ route('hydro.contact') }}" class="menu-links">contact us</a></li>
                      
                     </ul>
                     <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
@@ -31,122 +31,12 @@
             <!--Mobile Menu-->
             <nav id="main-nav">
                <ul class="first-nav">
-                  <li>
-                     <a href="#">Home</a>
-                     <ul>
-                        <li>
-                           <a href="#">Multi-Page Demo</a>
-                           <ul>
-                              <li><a href="digital-agency.html">Digital Agency</a></li>                                             
-                              <li><a href="digital-agency-v2.html">Digital Agency V2</a></li>                                             
-                              <li><a href="digital-agency-glassmorphism.html">Digital Agency V3</a></li>                                             
-                              <li><a href="web-design-agency.html">Web Design Agency</a></li>                                            
-                              <li><a href="digital-marketing.html">Digital Marketing</a></li>                                            
-                              <li><a href="lead-generation.html">Lead Generation Agency</a></li>
-                              <li><a href="landing-page-1.html">Landing Page V1</a></li>
-                              <li><a href="landing-page-2.html">Landing Page V2</a></li>
-                              <li><a href="freelance-portfolio.html">Freelance Portfolio</a></li>                                            
-                              <li><a href="app-development.html">App Development Agency</a></li>
-                              <li><a href="minimal-portfolio.html">Minimal Portfolio</a></li>
-                              <li><a href="creative-agency.html">Creative Agency</a></li>
-                              <li><a href="branding-agency.html">Branding  Agency</a></li>
-                              <li><a href="modern-agency.html">Modern Agency</a></li>
-                              <li><a href="business-and-startup.html">Business & Startup</a></li>
-                              <li><a href="graphic-studio.html">Graphic Studio</a></li>
-                           </ul>
-                        </li>
-                        <li>
-                           <a href="#">One-Page Demo</a>
-                           <ul>
-                              <li><a href="digital-agency-onepage.html">Digital Agency</a></li>
-                              <li><a href="digital-agency-dark-onepage.html">Digital Agency Dark</a></li>
-                              <li><a href="web-design-agency-onepage.html">Web Design Agency</a></li>
-                              <li><a href="web-design-agency-dark-onepage.html">Web Design Agency Dark</a></li>
-                              <li><a href="digital-marketing-onepage.html">Digital Marketing</a></li>
-                              <li><a href="digital-marketing-dark-onepage.html">Digital Marketing Dark</a></li>
-                              <li><a href="lead-generation-onepage.html">Lead Generation Agency</a></li>
-                              <li><a href="lead-generation-dark-onepage.html">Lead Generation Agency Dark</a></li>
-                              <li><a href="freelance-portfolio-onepage.html">Freelance Portfolio</a></li>
-                              <li><a href="freelance-portfolio-dark-onepage.html">Freelance Portfolio Dark</a></li>
-                              <li><a href="app-development-onepage.html">App Development Agency</a></li>
-                              <li><a href="minimal-portfolio-onepage.html">Minimal Portfolio</a></li>
-                              <li><a href="creative-agency-onepage.html">Creative Agency</a></li>
-                              <li><a href="branding-agency-onepage.html">Branding  Agency</a></li>
-                              <li><a href="modern-agency-onepage.html">Modern Agency</a></li>
-                              <li><a href="business-and-startup-onepage.html">Business & Startup</a></li>
-                              <li><a href="graphic-studio-onepage.html">Graphic Studio</a></li>
-                           </ul>
-                        </li>
-                     </ul>
-                  </li>
-                  <li>
-                     <a href="#">Pages</a>
-                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="why-us.html">Why Us</a></li>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="team-details.html">Team Single</a></li>
-                        <li><a href="case-study.html">Case Study</a></li>
-                        <li><a href="case-study-details.html">Case Study Single</a></li>
-                        <li><a href="mission-vision.html">Mission & Vision</a></li>
-                        <li><a href="development-process.html">Development Process</a></li>
-                        <li><a href="client-reviews.html">Client Reviews</a> </li>
-                        <li><a href="clients.html">Our Clients</a></li>
-                        <li><a href="get-quote.html">Contact Us</a> </li>
-                        <li><a href="get-quote-2.html">Contact Us 2</a> </li>
-                        <li><a href="login.html">Login Page</a> </li>
-                        <li><a href="service-card.html">Service Card</a> </li>
-                        <li><a href="service-web.html">Service Web</a></li>
-                        <li><a href="service-app.html">Service Mobile App</a></li>
-                        <li><a href="service-marketing.html">Service Digital Marketing</a></li>
-                        <li><a href="service-graphic.html">Service Graphic</a></li>
-                        <li><a href="career.html">Careers</a> </li>
-                        <li><a href="shop-page.html">Shop Single</a> </li>
-                        <li><a href="shop-details.html">Shop Details</a> </li>
-                        <li><a href="shop-cart.html">Shop Cart</a> </li>
-                     </ul>
-                  </li>
-                  <li>
-                     <a href="#">Shortcodes</a>
-                     <ul>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="button.html">Buttons</a></li>
-                        <li><a href="locations.html">Office Location</a></li>
-                        <li><a href="faq.html">FAQs</a>	</li>
-                        <li><a href="tabs.html">Tabs</a></li>
-                        <li><a href="error.html">404 Page</a></li>
-                        <li><a href="gradients.html">Background Gradients</a></li>
-                        <li><a href="header-v1.html">Header v1</a></li>
-                        <li><a href="header-v2.html">Header v2</a></li>
-                        <li><a href="header-v3.html">Header v3</a></li>
-                        <li><a href="footer-design.html">Footer</a></li>
-                        <li><a href="hover-animation.html">Hover Animation</a></li>
-                        <li><a href="popup-modal.html">Popup Modal</a></li>
-                        <li><a href="lists.html">Lists</a></li>
-                        <li><a href="bootstrap-components.html">Bootstrap Components</a></li>
-                     </ul>
-                  </li>
-                  <li>
-                     <a href="#">Portfolio</a>
-                     <ul>
-                        <li><a href="portfolio.html">Portfolio Grid 1</a> </li>
-                        <li><a href="portfolio-2.html">Portfolio Grid 2</a> </li>
-                        <li><a href="portfolio-block.html">Portfolio Wide Block</a> </li>
-                        <li><a href="portfolio-block-2.html">Portfolio Wide Block v2</a> </li>
-                        <li><a href="portfolio-details.html">Portfolio Details</a> </li>
-                     </ul>
-                  </li>
-                  <li>
-                     <a href="#">Blog</a>
-                     <ul>
-                        <li><a href="blog-grid-1.html">Blog Grid 1</a> </li>
-                        <li><a href="blog-grid-2.html">Blog Grid 2</a> </li>
-                        <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a> </li>
-                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a> </li>
-                        <li><a href="blog-single.html">Blog Single</a></li>
-                     </ul>
-                  </li>
+                <li class="sbmenu"><a href="{{ route('hydro.home') }}" class="menu-links">Home</a></li>
+                <li class="sbmenu"><a href="{{ route('hydro.home') }}#about" class="menu-links">About Us</a></li>
+                <li class="sbmenu"><a href="{{ route('hydro.home') }}#services" class="menu-links">Our Services</a></li>
+                <li class="sbmenu"><a href="{{ route('hydro.team') }}" class="menu-links">Our Teams</a></li>
+                <li class="sbmenu"><a href="{{ route('hydro.home') }}#portfolio" class="menu-links">Portfolio</a></li>
+                <li class="sbmenu"><a href="{{ route('hydro.contact') }}" class="menu-links">Contact Us</a></li>
                </ul>
                <ul class="bottom-nav">
                   <li class="prb">
