@@ -42,17 +42,17 @@
 		<!--End Preloader -->
 
         {{-- Start Header --}}
-        @include('hydro.layouts.header')
+        @include('layouts.header')
         {{-- End Header --}}
 
         <!--start sidebar -->
-        @include('hydro.layouts.sidebar')
+        @include('layouts.sidebar')
         <!--end sidebar -->
 		
     @yield('content')
 
     <!--Start Footer-->
-    @include('hydro.layouts.footer')
+    @include('layouts.footer')
     <!--End Footer-->
 <!-- js placed at the end of the document so the pages load faster -->
     <script src="{{ asset('assets/open/') }}/js/vendor/modernizr-3.5.0.min.js"></script>

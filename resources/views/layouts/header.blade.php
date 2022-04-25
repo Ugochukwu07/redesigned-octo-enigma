@@ -9,18 +9,18 @@
                </div>
                <div class="custom-nav" role="navigation">
                     <ul class="nav-list">
-                        <li class="sbmenu"><a href="{{ route('hydro.home') }}" class="menu-links">Home</a></li>
-                        <li class="sbmenu"><a href="{{ route('hydro.home') }}#about" class="menu-links">About Us</a></li>
-                        <li class="sbmenu"><a href="{{ route('hydro.home') }}#services" class="menu-links">Our Services</a></li>
-                        <li class="sbmenu"><a href="{{ route('hydro.team') }}" class="menu-links">Our Teams</a></li>
-                        <li class="sbmenu"><a href="{{ route('hydro.home') }}#portfolio" class="menu-links">Portfolio</a></li>
-                        <li class="sbmenu"><a href="{{ route('hydro.contact') }}" class="menu-links">contact us</a></li>
+                        <li class="sbmenu"><a href="{{ route('home') }}" class="menu-links">Home</a></li>
+                        <li class="sbmenu"><a href="{{ route('home') }}#about" class="menu-links">About Us</a></li>
+                        <li class="sbmenu"><a href="{{ route('home') }}#services" class="menu-links">Our Services</a></li>
+                        <li class="sbmenu"><a href="{{ route('team') }}" class="menu-links">Our Teams</a></li>
+                        <li class="sbmenu"><a href="{{ route('home') }}#portfolio" class="menu-links">Portfolio</a></li>
+                        <li class="sbmenu"><a href="{{ route('contact') }}" class="menu-links">contact us</a></li>
                      
                     </ul>
                     <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
                     <ul class="nav-list right-end-btn">                        
                         <li class="hidemobile"><a data-bs-toggle="offcanvas" href="#offcanvasExample" class="btn-round- btn-br bg-btn2"><i class="fas fa-phone-alt"></i></a></li>
-                        <li class="hidemobile"><a href="{{ route('hydro.home') }}#contact" class="btn-br bg-btn3 btshad-b2 lnk">Request A Quote <span class="circle"></span></a> </li>              
+                        <li class="hidemobile"><a href="{{ route('home') }}#contact" class="btn-br bg-btn3 btshad-b2 lnk">Request A Quote <span class="circle"></span></a> </li>              
                         <li class="hidedesktop darkmodeswitch"><div class="switch-wrapper"> <label class="switch" for="niwax"> <input type="checkbox" id="niwax"/>  <span class="slider round"></span> </label> </div> </li> 
                         <li class="hidedesktop"><a data-bs-toggle="offcanvas" href="#offcanvasExample" class="btn-round- btn-br bg-btn2"><i class="fas fa-phone-alt"></i></a></li>            
                         <li class="navm- hidedesktop"> <a class="toggle" href="#"><span></span></a></li>
@@ -31,12 +31,12 @@
             <!--Mobile Menu-->
             <nav id="main-nav">
                <ul class="first-nav">
-                <li class="sbmenu"><a href="{{ route('hydro.home') }}" class="menu-links">Home</a></li>
-                <li class="sbmenu"><a href="{{ route('hydro.home') }}#about" class="menu-links">About Us</a></li>
-                <li class="sbmenu"><a href="{{ route('hydro.home') }}#services" class="menu-links">Our Services</a></li>
-                <li class="sbmenu"><a href="{{ route('hydro.team') }}" class="menu-links">Our Teams</a></li>
-                <li class="sbmenu"><a href="{{ route('hydro.home') }}#portfolio" class="menu-links">Portfolio</a></li>
-                <li class="sbmenu"><a href="{{ route('hydro.contact') }}" class="menu-links">Contact Us</a></li>
+                <li class="sbmenu"><a href="{{ route('home') }}" class="menu-links">Home</a></li>
+                <li class="sbmenu"><a href="{{ route('home') }}#about" class="menu-links">About Us</a></li>
+                <li class="sbmenu"><a href="{{ route('home') }}#services" class="menu-links">Our Services</a></li>
+                <li class="sbmenu"><a href="{{ route('team') }}" class="menu-links">Our Teams</a></li>
+                <li class="sbmenu"><a href="{{ route('home') }}#portfolio" class="menu-links">Portfolio</a></li>
+                <li class="sbmenu"><a href="{{ route('contact') }}" class="menu-links">Contact Us</a></li>
                </ul>
                <ul class="bottom-nav">
                   <li class="prb">

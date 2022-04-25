@@ -1,4 +1,4 @@
-@extends('hydro.layouts.app')
+@extends('layouts.app')
 
 @section('title')
     Welcome
@@ -14,7 +14,7 @@
                     <div class="header-heading">
                         <h1 class="wow fadeInUp" data-wow-delay=".2s">Hydrogen Technologies Group</h1>
                         <p class="wow fadeInUp" data-wow-delay=".4s">We create web site with meaning. Great Web design speaks to your head and your heart.</p>
-                        <a href="{{ route('hydro.portfolio') }}" class="btn-main bg-btn lnk wow fadeInUp" data-wow-delay=".6s">View Case Studies <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                        <a href="{{ route('portfolio') }}" class="btn-main bg-btn lnk wow fadeInUp" data-wow-delay=".6s">View Case Studies <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
                     </div>
                 </div>
                 <div class="col-lg-6 v-center">
@@ -75,7 +75,7 @@
                     <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/branding.svg" alt="service" class="img-fluid"/></div>
                     <h4>Logo & Branding Service</h4>
                     <p>Have an idea for a new business?. We can make it real using our service.</p>
-                    <a href="{{ route('hydro.services.branding') }}">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
+                    <a href="{{ route('services.branding') }}">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@
                     <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/development.svg" alt="service" class="img-fluid"/></div>
                     <h4>Website Design & Development</h4>
                     <p>Great Web design speaks to your client's heart. It makes your business attractive</p>
-                    <a href="{{ route('hydro.services.web') }}">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
+                    <a href="{{ route('services.web') }}">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
                 </div>
             </div>
 
@@ -93,7 +93,7 @@
                     <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/app.svg" alt="service" class="img-fluid"/></div>
                     <h4>Mobile App Development</h4>
                     <p>We've vast design and technical experience that cut across various sectors.</p>
-                    <a href="{{ route('hydro.services.mobile') }}">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
+                    <a href="{{ route('services.mobile') }}">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
                     <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/marketing.svg" alt="service" class="img-fluid"/></div>
                     <h4>Digital Marketing Service</h4>
                     <p>We're a team of digital experts that help businesses drive growth.</p>
-                    <a href="{{ route('hydro.services.digital') }}">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
+                    <a href="{{ route('services.digital') }}">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
                 </div>
             </div>
         </div>
@@ -110,7 +110,7 @@
         <div class="-cta-btn mt70">
             <div class="free-cta-title v-center wow zoomInDown" data-wow-delay=".9s">
                 <p>Hire a <span>Dedicated Developer</span></p>
-                <a href="{{ route('hydro.contact') }}" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                <a href="{{ route('contact') }}" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
             </div>
         </div>
     </div>
@@ -233,10 +233,10 @@
                 <div class="col-lg-4 col-sm-4 mt60 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="isotope_item hover-scale">
                         <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
-                            <a href="{{ route('hydro.portfolio') }}"><img src="{{ asset('assets/open/') }}/images/me/esther.png" alt="image" class="img-fluid" /> </a>
+                            <a href="{{ route('portfolio') }}"><img src="{{ asset('assets/open/') }}/images/me/esther.png" alt="image" class="img-fluid" /> </a>
                         </div>
                         <div class="item-info">
-                            <h4><a href="{{ route('hydro.portfolio') }}">Esthingo Chops</a></h4>
+                            <h4><a href="{{ route('portfolio') }}">Esthingo Chops</a></h4>
                             <p>Graphic, Print</p>
                         </div>
                     </div>
@@ -294,7 +294,7 @@
     <div class="-cta-btn mt70">
     <div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.2s">
     <p>We <span>Promise.</span> We <span>Deliver.</span></p>
-    <a href="{{ route('hydro.contact') }}" class="btn-main bg-btn2 lnk">Let's Work Together<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+    <a href="{{ route('contact') }}" class="btn-main bg-btn2 lnk">Let's Work Together<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
     </div>
     </div>
     </div>
