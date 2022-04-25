@@ -110,7 +110,7 @@
         <div class="-cta-btn mt70">
             <div class="free-cta-title v-center wow zoomInDown" data-wow-delay=".9s">
                 <p>Hire a <span>Dedicated Developer</span></p>
-                <a href="{{ route('contact', ['purpose' => '']) }}" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                <a href="{{ route('contact', ['purpose' => 'all']) }}" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
             </div>
         </div>
     </div>
@@ -294,7 +294,7 @@
             <div class="-cta-btn mt70">
                 <div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.2s">
                     <p>We <span>Promise.</span> We <span>Deliver.</span></p>
-                    <a href="{{ route('contact', ['purpose' => '']) }}" class="btn-main bg-btn2 lnk">Let's Work Together<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                    <a href="{{ route('contact', ['purpose' => 'all']) }}" class="btn-main bg-btn2 lnk">Let's Work Together<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
                 </div>
             </div>
         </div>
