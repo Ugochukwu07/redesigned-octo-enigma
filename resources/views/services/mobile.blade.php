@@ -95,7 +95,7 @@ Mobile App Development
 @section('content')	
     
 <!--Breadcrumb Area-->
-<section class="breadcrumb-areav2" data-background="{{ asset('assets/open/images/banner/8.jpg') }}">
+<section class="breadcrumb-areav2" data-background="{{ asset('assets/open/images/service/mobile-bg.jpg') }}">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7">
@@ -199,16 +199,18 @@ Mobile App Development
 
 <div class="col-lg-6 col-sm-6 mt30  wow fadeInUp" data-wow-delay=".2s">
 <div class="s-block wide-sblock">
-  <div class="s-card-icon-large"><img src="images/service/mob-service-item2.png" alt="service" class="img-fluid"/></div>
+  <div class="s-card-icon-large">
+      <img src="{{ asset('assets/open/images/service/iOS.png') }}" alt="iOS App Development" class="img-fluid"/>
+</div>
   <div class="s-block-content-large">
   <h4>iOS App Development</h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  <p>{{ config('app.name') }} understands your unique needs and provides mobile application development solutions for your business. Connect with us to get to take your business to another level.</p>
 </div></div>
 </div>
 
 <div class="col-lg-6 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 <div class="s-block wide-sblock">
-  <div class="s-card-icon-large"><img src="images/service/mob-service-item1.png" alt="service" class="img-fluid"/></div>
+  <div class="s-card-icon-large"><img src="{{ asset('assets/open/images/service/android.png') }}" alt="Android App Development" class="img-fluid"/></div>
   <div class="s-block-content-large">
   <h4>Android App Development</h4>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
