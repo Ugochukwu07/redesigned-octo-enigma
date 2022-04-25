@@ -1,4 +1,4 @@
-@extends('hydro.layouts.app')
+@extends('layouts.app')
 
 @section('title')
     Page Not Found
@@ -17,7 +17,7 @@
     <div class="images mt20">
     <img src="{{ asset('assets/open/') }}/images/shape/error-page.png" alt="error page" class="img-fluid"/>
     </div>
-    <a href="{{ route('hydro.home') }}" class="btn-outline">Back to Home</a>
+    <a href="{{ route('home') }}" class="btn-outline">Back to Home</a>
     </div>
     </div>
     </div>

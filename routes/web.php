@@ -19,19 +19,24 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', [PagesControllers::class, 'index'])->name('home');
-Route::get('/portfolio', [PagesControllers::class, 'portfolio'])->name('portfolio');
-Route::get('/team', [PagesControllers::class, 'team'])->name('team');
-Route::get('/contact', [PagesControllers::class, 'contact'])->name('contact');
-    
-//Services
-Route::prefix('services')->name('services.')->group(function(){
-    Route::get('/', [PagesControllers::class, 'services'])->name('home');
-    Route::get('/branding', [PagesControllers::class, 'branding'])->name('branding');
-    Route::get('/mobile', [PagesControllers::class, 'mobile'])->name('mobile');
-    Route::get('/web', [PagesControllers::class, 'web'])->name('web');
-    Route::get('/digital-marketing', [PagesControllers::class, 'digital'])->name('digital');
+Route::controller(PagesControllers::class)->group(function(){
+    Route::get('/','index')->name('home');
+    Route::get('/portfolio','portfolio')->name('portfolio');
+    Route::get('/team','team')->name('team');
+    Route::get('/contact','contact')->name('contact');
+    Route::get('/contact/{purpose}','contact')->where(['purpose' => '[a-z]+'])->name('contact');
+        
+    //Services
+    Route::prefix('services')->name('services.')->group(function(){
+    Route::get('/','services')->name('home');
+    Route::get('/branding','branding')->name('branding');
+    Route::get('/mobile','mobile')->name('mobile');
+    Route::get('/web','web')->name('web');
+    Route::get('/digital-marketing','digital')->name('digital');
+    });
 });
+
+
 
 //Artisan
 Route::get('/artisan/{command}', function($command){

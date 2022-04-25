@@ -5,7 +5,7 @@
     <div class="col-lg-6">
     <div class="email-subs">
       <h3>Get New Insights Weekly</h3>
-      <p>News letter dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Enter your email</p>
+      <p>So you can be the first to find out the latest news and tips about applications, as well as general {{ config('app.name') }} updates throughout the year.</p>
     </div>
     </div>
     <div class="col-lg-6 v-center">
@@ -23,25 +23,25 @@
     <div class="container">
     <div class="row justify-content-between">
     <div class="col-lg-3 col-sm-6  ftr-brand-pp">
-     <a class="navbar-brand mt30 mb25 f-dark-logo" href="#"> <img src="images/logo.png" alt="Logo"/></a>
-     <a class="navbar-brand mt30 mb25 f-white-logo" href="#"> <img src="images/white-logo.png" alt="Logo" /></a>
-     <p>News letter dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Enter your email</p>
-     <a href="#" class="btn-main bg-btn3 lnk mt20">Become Partner <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+     <a class="navbar-brand mt30 mb25 f-dark-logo" href="#"> <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo"/></a>
+     <a class="navbar-brand mt30 mb25 f-white-logo" href="#"> <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo" /></a>
+     <p>We are the leading software development company in Anambra, Nigeria. We build the most engaging and on-demand software applications in Nigeria.</p>
+     <a href="{{ route('contact') }}" class="btn-main bg-btn3 lnk mt20">Become Partner <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
     </div>
     <div class="col-lg-3 col-sm-6">
     <h5>Contact Us</h5>
     <ul class="footer-address-list ftr-details">
       <li>
         <span><i class="fas fa-envelope"></i></span>
-        <p>Email <span> <a href="mailto:info@businessname.com">info@businessname.com</a></span></p>
+        <p>Email <span> <a href="mailto:hydro@storelad.com">hydro@storelad.com</a></span></p>
       </li>
       <li>
         <span><i class="fas fa-phone-alt"></i></span>
-        <p>Phone <span> <a href="tel:+10000000000">+1 0000 000 000</a></span></p>
+        <p>Phone <span> <a href="tel:+2348143440606">+234 8143 440 606</a></span></p>
       </li>
       <li>
         <span><i class="fas fa-map-marker-alt"></i></span>
-        <p>Address <span> 123 Business Centre London SW1A 1AA</span></p>
+        <p>Address <span> Nnamdi Azikwe University Awka.</span></p>
       </li>
     </ul>
     </div>
@@ -59,14 +59,14 @@
     <div class="col-lg-4 col-sm-6 footer-blog-">
     <h5>Latest Blogs</h5>
     <div class="single-blog-">
-      <div class="post-thumb"><a href="#"><img src="images/blog/blog-small.jpg" alt="blog"></a></div>
+      <div class="post-thumb"><a href="#"><img src="{{ asset('assets/open/') }}/images/blog/blog-small.jpg" alt="blog"></a></div>
       <div class="content">
         <p class="post-meta"><span class="post-date"><i class="far fa-clock"></i>April 15, 2020</span></p>
         <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
       </div>
     </div>
     <div class="single-blog-">
-      <div class="post-thumb"><a href="#"><img src="images/blog/blog-small.jpg" alt="blog"></a></div>
+      <div class="post-thumb"><a href="#"><img src="{{ asset('assets/open/') }}/images/blog/blog-small.jpg" alt="blog"></a></div>
       <div class="content">
         <p class="post-meta"><span class="post-date"><i class="far fa-clock"></i>April 15, 2020</span></p>
         <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
@@ -81,16 +81,16 @@
     <div class="row">
     <div class="col-lg-4 v-center">
     <h5 class="mb10">Top App Development Companies</h5>
-    <p>News letter dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Enter your email</p>
+    <p>We design, build and deploy the best mobile applications in Nigeria that meet customers' satisfaction.</p>
     </div>
-    <div class="col-lg-8 v-center">
-    <ul class="footer-badges-">
-      <li><a href="#"><img src="images/about/badges-a.png" alt="badges"></a></li>
-      <li><a href="#"><img src="images/about/badges-b.png" alt="badges"></a></li>
-      <li><a href="#"><img src="images/about/badges-c.png" alt="badges"></a></li>
-      <li><a href="#"><img src="images/about/badges-d.png" alt="badges"></a></li>
-    </ul>
-    </div>
+      <div class="col-lg-8 v-center">
+        <ul class="footer-badges-">
+          <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-a.png" alt="badges"></a></li>
+          <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-b.png" alt="badges"></a></li>
+          <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-c.png" alt="badges"></a></li>
+          <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-d.png" alt="badges"></a></li>
+        </ul>
+      </div>
     </div>
     </div>
     </div>
@@ -111,7 +111,7 @@
         <a href="javascript:void(0)" target="blank"><i class="fab fa-behance"></i></a>
       </div>
       <div class="footer-">
-        <p>© 2020-2022. All Rights Reserved By <a href="https://themeforest.net/user/rajesh-doot/portfolio" target="blank">Rajesh Doot</a></p>
+        <p>© 2018-{{ date('Y') }}. All Rights Reserved By <a href="{{ route('home') }}" target="blank">Ekwueme Ugochukwu</a></p>
       </div>
     </div>
     </div>

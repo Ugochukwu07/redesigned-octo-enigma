@@ -259,136 +259,137 @@
 
     <!--Start Clients-->
     <section class="clients-section pad-tb">
-    <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-lg-8">
-    <div class="common-heading">
-    <span>Our happy customers</span>
-    <h2>Some of our Clients</h2>
-    </div>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-lg-12">
-    <div class="opl">
-    <ul>
-    <li class=" wow fadeIn" data-wow-delay=".2s">
-        <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-1.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-    </li>
-    <li class=" wow fadeIn" data-wow-delay=".4s">
-        <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-2.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-    </li>
-    <li class=" wow fadeIn" data-wow-delay=".6s">
-        <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-3.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-    </li>
-    <li class=" wow fadeIn" data-wow-delay=".8s">
-        <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-4.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-    </li>
-    <li class=" wow fadeIn" data-wow-delay="1s">
-        <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-5.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-    </li>
-    </ul>
-    </div>
-    </div>
-    </div>
-    <div class="-cta-btn mt70">
-    <div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.2s">
-    <p>We <span>Promise.</span> We <span>Deliver.</span></p>
-    <a href="{{ route('contact') }}" class="btn-main bg-btn2 lnk">Let's Work Together<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-    </div>
-    </div>
-    </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="common-heading">
+                        <span>Our happy customers</span>
+                        <h2>Some of our Clients</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="opl">
+                        <ul>
+                            <li class=" wow fadeIn" data-wow-delay=".2s">
+                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-1.jpg" alt="text" class="img-fluid rounded-circle"/></div>
+                            </li>
+                            <li class=" wow fadeIn" data-wow-delay=".4s">
+                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-2.jpg" alt="text" class="img-fluid rounded-circle"/></div>
+                            </li>
+                            <li class=" wow fadeIn" data-wow-delay=".6s">
+                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-3.jpg" alt="text" class="img-fluid rounded-circle"/></div>
+                            </li>
+                            <li class=" wow fadeIn" data-wow-delay=".8s">
+                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-4.jpg" alt="text" class="img-fluid rounded-circle"/></div>
+                            </li>
+                            <li class=" wow fadeIn" data-wow-delay="1s">
+                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-5.jpg" alt="text" class="img-fluid rounded-circle"/></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="-cta-btn mt70">
+                <div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.2s">
+                    <p>We <span>Promise.</span> We <span>Deliver.</span></p>
+                    <a href="{{ route('contact') }}" class="btn-main bg-btn2 lnk">Let's Work Together<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                </div>
+            </div>
+        </div>
     </section>
     <!--End Clients-->
+
     <!--Start work-category-->
     <section class="work-category pad-tb tilt3d">
-    <div class="container">
-    <div class="row">
-    <div class="col-lg-4 v-center">
-    <div class="common-heading text-l">
-    <span>Industries we work for</span>
-    <h2>Helping Businesses in All Domains</h2>
-    <p>Successfully delivered digital products. The result: intelligent, effective web design that makes a lasting impression.</p>
-    </div>
-    </div>
-    <div class="col-lg-8">
-    <div class="work-card-set">
-    <div  class="icon-set wow fadeIn" data-wow-delay=".2s">
-        <div class="work-card cd1">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-1.png" alt="Industries" /></div>
-            <p>Social Networking</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 v-center">
+                    <div class="common-heading text-l">
+                        <span>Industries we work for</span>
+                        <h2>Helping Businesses in All Domains</h2>
+                        <p>Successfully delivered digital products. The result: intelligent, effective web design that makes a lasting impression.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="work-card-set">
+                        <div  class="icon-set wow fadeIn" data-wow-delay=".2s">
+                            <div class="work-card cd1">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-1.png" alt="Industries" /></div>
+                                <p>Social Networking</p>
+                            </div>
+                        </div>
+                        <div  class="icon-set wow fadeIn" data-wow-delay=".4s">
+                            <div class="work-card cd2">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-2.png" alt="Industries" /></div>
+                                <p>Digital Marketing</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay=".6s">
+                            <div class="work-card cd3">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-3.png" alt="Industries" /></div>
+                                <p>Ecommerce Development</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay=".8s">
+                            <div class="work-card cd4">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-4.png" alt="Industries" /></div>
+                                <p>Video Service</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay="1s">
+                            <div class="work-card cd5">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-5.png" alt="Industries" /></div>
+                                <p>Banking Service</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay="1.2s">
+                            <div class="work-card cd6">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-6.png" alt="Industries" /></div>
+                                <p>Enterprise Service</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay="1.4s">
+                            <div class="work-card cd7">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-7.png" alt="Industries" /></div>
+                                <p>Education Service</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay="1.6s">
+                            <div class="work-card cd8">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-8.png" alt="Industries" /></div>
+                                <p>Tour and Travels</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay="1.8s">
+                            <div class="work-card cd9">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-9.png" alt="Industries" /></div>
+                                <p>Health Service</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay="2s">
+                            <div class="work-card cd10">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-10.png" alt="Industries" /></div>
+                                <p>Event & Ticket</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay="2.2s">
+                            <div class="work-card cd11">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-11.png" alt="Industries" /></div>
+                                <p>Restaurant Service</p>
+                            </div>
+                        </div>
+                        <div class="icon-set wow fadeIn" data-wow-delay="2.4s">
+                            <div class="work-card cd12">
+                                <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-12.png" alt="Industries" /></div>
+                                <p>Business Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div  class="icon-set wow fadeIn" data-wow-delay=".4s">
-        <div class="work-card cd2">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-2.png" alt="Industries" /></div>
-            <p>Digital Marketing</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay=".6s">
-        <div class="work-card cd3">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-3.png" alt="Industries" /></div>
-            <p>Ecommerce Development</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay=".8s">
-        <div class="work-card cd4">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-4.png" alt="Industries" /></div>
-            <p>Video Service</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay="1s">
-        <div class="work-card cd5">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-5.png" alt="Industries" /></div>
-            <p>Banking Service</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay="1.2s">
-        <div class="work-card cd6">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-6.png" alt="Industries" /></div>
-            <p>Enterprise Service</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay="1.4s">
-        <div class="work-card cd7">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-7.png" alt="Industries" /></div>
-            <p>Education Service</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay="1.6s">
-        <div class="work-card cd8">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-8.png" alt="Industries" /></div>
-            <p>Tour and Travels</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay="1.8s">
-        <div class="work-card cd9">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-9.png" alt="Industries" /></div>
-            <p>Health Service</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay="2s">
-        <div class="work-card cd10">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-10.png" alt="Industries" /></div>
-            <p>Event & Ticket</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay="2.2s">
-        <div class="work-card cd11">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-11.png" alt="Industries" /></div>
-            <p>Restaurant Service</p>
-        </div>
-    </div>
-    <div class="icon-set wow fadeIn" data-wow-delay="2.4s">
-        <div class="work-card cd12">
-            <div class="icon-bg"><img src="{{ asset('assets/open/') }}/images/icons/icon-12.png" alt="Industries" /></div>
-            <p>Business Consultant</p>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
     </section>
     <!--End  work-category-->
     <!--Start Testinomial-->
@@ -437,11 +438,13 @@
     </div>
     <div class="client-thumbs mt30">
         <div class="media v-center">
-        <div class="user-image bdr-radius"><img src="{{ asset('assets/open/') }}/images/me/rose.jpg" alt="girl" class="img-fluid" /></div>
-        <div class="media-body user-info">
-            <h5>Nnadi Rose🌹</h5>
-            <p>Tiktok Influencer, <small>Abuja, Nigeria</small></p>
-        </div>
+            <div class="user-image bdr-radius">
+                <img src="{{ asset('assets/open/') }}/images/me/rose.jpg" alt="girl" class="img-fluid" />
+            </div>
+            <div class="media-body user-info">
+                <h5>Nnadi Rose🌹</h5>
+                <p>Tiktok Influencer, <small>Abuja, Nigeria</small></p>
+            </div>
         </div>
     </div>
     </div>
@@ -451,94 +454,75 @@
     </div>
     </section>
     <!--End Testinomial-->
+
     <!--Start Enquire Form-->
     <section class="enquire-form pad-tb">
-    <div class="container">
-    <div class="row light-bgs">
-    <div class="col-lg-6">
-    <div class="common-heading text-l">
-    <span>Contact Now</span>
-    <h2 class="mt0">Have Question? Write a Message</h2>
-    </div>
-    <div class="form-block">
-    <form action="#" method="post" name="feedback-form">
-    <div class="fieldsets row">
-        <div class="col-md-6"><input type="text" placeholder="Full Name" name="name"></div>
-        <div class="col-md-6"><input type="email" placeholder="Email Address" name="email"></div>
-    </div>
-    <div class="fieldsets row">
-        <div class="col-md-6"><input type="number" placeholder="Contact Number" name="phone"></div>
-        <div class="col-md-6"><input type="text" placeholder="Subject" name="subject"></div>
-    </div>
-    <div class="fieldsets"><textarea placeholder="Message" name="message"></textarea></div>
-    <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" checked="checked">
-        <label class="custom-control-label" for="customCheck">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Business Name.</label>
-    </div>
-    <div class="fieldsets mt20"> <button type="submit" name="submit" class="lnk btn-main bg-btn">Submit <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button> </div>
-    <p class="trm"><i class="fas fa-lock"></i>We hate spam, and we respect your privacy.</p>
-    </form>
-    </div>
-    </div>
-    <div class="col-lg-6 v-center">
-    <div class="enquire-image">
-    <img src="{{ asset('assets/open/') }}/images/me/contact.jpg" alt="enquire" class="img-fluid rounded" />
-    </div>
-    </div>
-    </div>
-    </div>
+        <div class="container">
+            <div class="row light-bgs">
+                <div class="col-lg-6">
+                    <div class="common-heading text-l">
+                        <span>Contact Now</span>
+                        <h2 class="mt0">Have Question? Write a Message</h2>
+                    </div>
+                    <div class="form-block">
+                        <form action="#" method="post" name="feedback-form">
+                            <div class="fieldsets row">
+                                <div class="col-md-6"><input type="text" placeholder="Full Name" name="name"></div>
+                                <div class="col-md-6"><input type="email" placeholder="Email Address" name="email"></div>
+                            </div>
+                            <div class="fieldsets row">
+                                <div class="col-md-6"><input type="number" placeholder="Contact Number" name="phone"></div>
+                                <div class="col-md-6"><input type="text" placeholder="Subject" name="subject"></div>
+                            </div>
+                            <div class="fieldsets"><textarea placeholder="Message" name="message"></textarea></div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" checked="checked">
+                                <label class="custom-control-label" for="customCheck">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Business Name.</label>
+                            </div>
+                            <div class="fieldsets mt20">
+                                <button type="submit" name="submit" class="lnk btn-main bg-btn">Submit <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button>
+                            </div>
+                            <p class="trm"><i class="fas fa-lock"></i>We hate spam, and we respect your privacy.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 v-center">
+                    <div class="enquire-image">
+                        <img src="{{ asset('assets/open/') }}/images/me/contact.jpg" alt="enquire" class="img-fluid rounded" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!--End Enquire Form-->
+
     <!--Start Location-->
     <section class="our-office pad-tb">
-    <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-lg-8">
-    <div class="common-heading">
-    <span>Our Locations</span>
-    <h2>Our office</h2>
-    </div>
-    </div>
-    </div>
-    <div class="row justify-content-center upset shape-numm">
-    <div class="col-lg-4 col-sm-6 shape-loc wow fadeInUp" data-wow-delay=".2s">
-    <div class="office-card">
-    <div class="skyline-img" data-tilt data-tilt-max="4" data-tilt-speed="1000">
-    <img src="{{ asset('assets/open/') }}/images/location/newyork.png" alt="New York" class="img-fluid" />
-    </div>
-    <div class="office-text">
-    <h4>New York</h4>
-    <p>603 FA Forest Avenue, New York, USA 10021</p>
-    <a href="javascript:void(0)" target="blank" class="btn-outline">View on Map <i class="fas fa-chevron-right fa-icon"></i></a>
-    </div>
-    </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 shape-loc wow fadeInUp" data-wow-delay=".4s">
-    <div class="office-card">
-    <div class="skyline-img" data-tilt data-tilt-max="4" data-tilt-speed="1000">
-    <img src="{{ asset('assets/open/') }}/images/location/sydeny.png" alt="sydney" class="img-fluid" />
-    </div>
-    <div class="office-text">
-    <h4>Sydney</h4>
-    <p>2449 Columbia Boulevard, Sydney, 10021</p>
-    <a href="javascript:void(0)" target="blank" class="btn-outline">View on Map <i class="fas fa-chevron-right fa-icon"></i></a>
-    </div>
-    </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 shape-loc wow fadeInUp" data-wow-delay=".6s">
-    <div class="office-card mb0">
-    <div class="skyline-img" data-tilt data-tilt-max="4" data-tilt-speed="1000">
-    <img src="{{ asset('assets/open/') }}/images/location/rome.png" alt="rome" class="img-fluid" />
-    </div>
-    <div class="office-text">
-    <h4>Rome</h4>
-    <p>9988 Piazzetta Scalette Rubiani 99, Rome, 84090</p>
-    <a href="javascript:void(0)" target="blank" class="btn-outline">View on Map <i class="fas fa-chevron-right fa-icon"></i></a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="common-heading">
+                        <span>Our Locations</span>
+                        <h2>Our office</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center upset shape-numm">
+                <div class="col-lg-4 col-sm-6 shape-loc wow fadeInUp" data-wow-delay=".2s">
+                    <div class="office-card">
+                        <div class="skyline-img" data-tilt data-tilt-max="4" data-tilt-speed="1000">
+                            <img src="{{ asset('assets/open/') }}/img/office/nau.jpg" alt="Awka, Anambra" class="img-fluid" />
+                        </div>
+                        <div class="office-text">
+                            <h4>Awka, Anambra</h4>
+                            <p>Along Enugu-Onitsha Expressway, Ifite Road, 420110, Awka</p>
+                            <a href="https://g.page/nnamdi-azikiwe-university-awka?share" target="blank" class="btn-outline">View on Map <i class="fas fa-chevron-right fa-icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!--End Location-->
+
 @endsection

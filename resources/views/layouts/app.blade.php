@@ -28,7 +28,8 @@
         .clients-logo {
             background: #050748;
         }
-    </style>	
+        @yield('styles')	
+    </style>
  </head>
 <body>  
 
@@ -64,7 +65,7 @@
     <!--common script file-->
     <script src="{{ asset('assets/open/') }}/js/main.js"></script>
     <script>
-        $('h2.nav-title').html('Hydrogen Technologies')
+        $('h2.nav-title').html("{{ config('app.name') }}")
     </script>
 </body>
 </html>
