@@ -14,7 +14,7 @@
                         <li class="sbmenu"><a href="{{ route('home') }}#services" class="menu-links">Our Services</a></li>
                         <li class="sbmenu"><a href="{{ route('team') }}" class="menu-links">Our Teams</a></li>
                         <li class="sbmenu"><a href="{{ route('home') }}#portfolio" class="menu-links">Portfolio</a></li>
-                        <li class="sbmenu"><a href="{{ route('contact') }}" class="menu-links">contact us</a></li>
+                        <li class="sbmenu"><a href="{{ route('contact', ['purpose' => 'all']) }}" class="menu-links">contact us</a></li>
                      
                     </ul>
                     <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
@@ -36,7 +36,7 @@
                 <li class="sbmenu"><a href="{{ route('home') }}#services" class="menu-links">Our Services</a></li>
                 <li class="sbmenu"><a href="{{ route('team') }}" class="menu-links">Our Teams</a></li>
                 <li class="sbmenu"><a href="{{ route('home') }}#portfolio" class="menu-links">Portfolio</a></li>
-                <li class="sbmenu"><a href="{{ route('contact') }}" class="menu-links">Contact Us</a></li>
+                <li class="sbmenu"><a href="{{ route('contact', ['purpose' => 'all']) }}" class="menu-links">Contact Us</a></li>
                </ul>
                <ul class="bottom-nav">
                   <li class="prb">
