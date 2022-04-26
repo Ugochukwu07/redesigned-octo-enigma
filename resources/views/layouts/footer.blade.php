@@ -26,7 +26,7 @@
      <a class="navbar-brand mt30 mb25 f-dark-logo" href="#"> <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo"/></a>
      <a class="navbar-brand mt30 mb25 f-white-logo" href="#"> <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo" /></a>
      <p>We are the leading software development company in Anambra, Nigeria. We build the most engaging and on-demand software applications in Nigeria.</p>
-     <a href="{{ route('contact') }}" class="btn-main bg-btn3 lnk mt20">Become Partner <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+     <a href="{{ route('contact', ['purpose' => 'all']) }}" class="btn-main bg-btn3 lnk mt20">Become Partner <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
     </div>
     <div class="col-lg-3 col-sm-6">
     <h5>Contact Us</h5>
