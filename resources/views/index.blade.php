@@ -117,6 +117,7 @@
 </section>
 <!--End Service-->
 
+@include('layouts.widgets.why-us')
 
     <!--Start statistics-->
     <div class="statistics-section bg-gradient pad-tb tilt3d">

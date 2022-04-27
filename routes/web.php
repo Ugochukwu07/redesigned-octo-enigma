@@ -23,7 +23,7 @@ Route::controller(PagesControllers::class)->group(function(){
     Route::get('/','index')->name('home');
     Route::get('/portfolio','portfolio')->name('portfolio');
     Route::get('/team','team')->name('team');
-    Route::get('/contact/{purpose}','contact')->where(['purpose' => '[a-z]+'])->name('contact');
+    Route::get('/contact/{purpose}','contact')->where(['purpose' => '[a-z\s]+'])->name('contact');
         
     //Services
     Route::prefix('services')->name('services.')->group(function(){

@@ -20,7 +20,7 @@ class PagesControllers extends Controller
         return view('errors.404');
     }
 
-    public function contact($purpose = ""){
+    public function contact($purpose){
         return view('errors.404');
     }
 
