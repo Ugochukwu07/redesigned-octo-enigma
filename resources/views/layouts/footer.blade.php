@@ -22,13 +22,13 @@
     <div class="footer-row2">
     <div class="container">
     <div class="row justify-content-between">
-    <div class="col-lg-3 col-sm-6  ftr-brand-pp">
+    <div class="col-lg-4 col-sm-6  ftr-brand-pp">
      <a class="navbar-brand mt30 mb25 f-dark-logo" href="#"> <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo"/></a>
      <a class="navbar-brand mt30 mb25 f-white-logo" href="#"> <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo" /></a>
      <p>We are the leading software development company in Anambra, Nigeria. We build the most engaging and on-demand software applications in Nigeria.</p>
      <a href="{{ route('contact', ['purpose' => 'all']) }}" class="btn-main bg-btn3 lnk mt20">Become Partner <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
     </div>
-    <div class="col-lg-3 col-sm-6">
+    <div class="col-lg-2 col-sm-6">
     <h5>Contact Us</h5>
     <ul class="footer-address-list ftr-details">
       <li>
@@ -46,32 +46,32 @@
     </ul>
     </div>
     <div class="col-lg-2 col-sm-6">
-    <h5>Company</h5>
-    <ul class="footer-address-list link-hover">
-      <li><a href="get-quote.html">Contact</a></li>
-      <li><a href="javascript:void(0)">Customer's FAQ</a></li>
-      <li><a href="javascript:void(0)">Refund Policy</a></li>
-      <li><a href="javascript:void(0)">Privacy Policy</a></li>
-      <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-      <li><a href="javascript:void(0)">License & Copyright</a></li>
-    </ul>
+      <h5>Company</h5>
+      <ul class="footer-address-list link-hover">
+        <li><a href="get-quote.html">Contact</a></li>
+        <li><a href="javascript:void(0)">Customer's FAQ</a></li>
+        <li><a href="javascript:void(0)">Refund Policy</a></li>
+        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+        <li><a href="javascript:void(0)">License & Copyright</a></li>
+      </ul>
     </div>
-    <div class="col-lg-4 col-sm-6 footer-blog-">
-    <h5>Latest Blogs</h5>
-    <div class="single-blog-">
-      <div class="post-thumb"><a href="#"><img src="{{ asset('assets/open/') }}/images/blog/blog-small.jpg" alt="blog"></a></div>
-      <div class="content">
-        <p class="post-meta"><span class="post-date"><i class="far fa-clock"></i>April 15, 2020</span></p>
-        <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
+    <div class="col-lg-3 col-sm-6 footer-blog-">
+      <h5>Latest Blogs</h5>
+      <div class="single-blog-">
+        <div class="post-thumb"><a href="#"><img src="{{ asset('assets/open/') }}/images/blog/blog-small.jpg" alt="blog"></a></div>
+        <div class="content">
+          <p class="post-meta"><span class="post-date"><i class="far fa-clock"></i>April 15, 2020</span></p>
+          <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
+        </div>
       </div>
-    </div>
-    <div class="single-blog-">
-      <div class="post-thumb"><a href="#"><img src="{{ asset('assets/open/') }}/images/blog/blog-small.jpg" alt="blog"></a></div>
-      <div class="content">
-        <p class="post-meta"><span class="post-date"><i class="far fa-clock"></i>April 15, 2020</span></p>
-        <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
+      <div class="single-blog-">
+        <div class="post-thumb"><a href="#"><img src="{{ asset('assets/open/') }}/images/blog/blog-small.jpg" alt="blog"></a></div>
+        <div class="content">
+          <p class="post-meta"><span class="post-date"><i class="far fa-clock"></i>April 15, 2020</span></p>
+          <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
+        </div>
       </div>
-    </div>
     </div>
     </div>
     </div>

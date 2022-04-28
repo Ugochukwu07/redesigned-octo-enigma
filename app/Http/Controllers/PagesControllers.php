@@ -37,7 +37,7 @@ class PagesControllers extends Controller
     }
 
     public function web(){
-        return view('errors.404');
+        return view('services.web');
     }
 
     public function digital(){
