@@ -43,4 +43,9 @@ class PagesControllers extends Controller
     public function digital(){
         return view('errors.404');
     }
+
+    //Auth
+    public function login(){
+        return view('auth.login');
+    }
 }

@@ -236,5 +236,5 @@
 
       <x-ClientReviews />
       
-      <x-cta />
+      <x-CTA />
 @endsection

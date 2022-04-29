@@ -5,91 +5,97 @@ Mobile App Development
 @endsection
 
 @section('styles')
-@keyframes rotateme {
-    from {
-        transform: rotate(0deg);
-    }
-    to { 
-        transform: rotate(360deg);
-    }
-}
-@-webkit-keyframes rotateme {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to { 
-        -webkit-transform: rotate(360deg);
-    }
-}
-@-moz-keyframes rotateme {
-    from {
-        -moz-transform: rotate(0deg);
-    }
-    to { 
-        -moz-transform: rotate(360deg);
-    }
-}
-@-o-keyframes rotateme {
-    from {
-        -o-transform: rotate(0deg);
-    }
-    to { 
-        -o-transform: rotate(360deg);
-    }
-}
+<style>
+  @keyframes rotateme {
+      from {
+          transform: rotate(0deg);
+      }
+      to { 
+          transform: rotate(360deg);
+      }
+  }
+  @-webkit-keyframes rotateme {
+      from {
+          -webkit-transform: rotate(0deg);
+      }
+      to { 
+          -webkit-transform: rotate(360deg);
+      }
+  }
+  @-moz-keyframes rotateme {
+      from {
+          -moz-transform: rotate(0deg);
+      }
+      to { 
+          -moz-transform: rotate(360deg);
+      }
+  }
+  @-o-keyframes rotateme {
+      from {
+          -o-transform: rotate(0deg);
+      }
+      to { 
+          -o-transform: rotate(360deg);
+      }
+  }
 
 
 
-.images-column {
-    position: relative;
-    margin-bottom: 40px;
-}
-.images-column .images-outer {
-    position: relative;
-}
-    .images-column .inner-column {
-        position: relative;
-        padding: 50px 0px;
-        text-align: center;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-    .images-column .pattern-layer {
-        position: absolute;
-        left: -70px;
-        top: -150px;
-        width: 745px;
-        height: 732px;
-        background-repeat: no-repeat;
-    }
+  .images-column {
+      position: relative;
+      margin-bottom: 40px;
+  }
+  .images-column .images-outer {
+      position: relative;
+  }
+      .images-column .inner-column {
+          position: relative;
+          padding: 50px 0px;
+          text-align: center;
+          background-position: center center;
+          background-repeat: no-repeat;
+      }
+      .images-column .pattern-layer {
+          position: absolute;
+          left: -70px;
+          top: -150px;
+          width: 745px;
+          height: 732px;
+          background-repeat: no-repeat;
+      }
 
-    .images-column .pattern-layer {
-        animation-name: rotateme;
-        animation-duration: 15s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        -webkit-animation-name: rotateme;
-        -webkit-animation-duration: 15s;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-name: rotateme;
-        -moz-animation-duration: 15s;
-        -moz-animation-iteration-count: infinite;
-        -moz-animation-timing-function: linear;
-        -ms-animation-name: rotateme;
-        -ms-animation-duration: 15s;
-        -ms-animation-iteration-count: infinite;
-        -ms-animation-timing-function: linear;
-        -o-animation-name: rotateme;
-        -o-animation-duration: 15s;
-        -o-animation-iteration-count: infinite;
-        -o-animation-timing-function: linear;
-    }
-    .images-column .image {
-        position: relative;
-        display: inline-block !important;
-        box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
-    }
+      .images-column .pattern-layer {
+          animation-name: rotateme;
+          animation-duration: 15s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+
+          -webkit-animation-name: rotateme;
+          -webkit-animation-duration: 15s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-timing-function: linear;
+
+          -moz-animation-name: rotateme;
+          -moz-animation-duration: 15s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-timing-function: linear;
+
+          -ms-animation-name: rotateme;
+          -ms-animation-duration: 15s;
+          -ms-animation-iteration-count: infinite;
+          -ms-animation-timing-function: linear;
+          
+          -o-animation-name: rotateme;
+          -o-animation-duration: 15s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-timing-function: linear;
+      }
+      .images-column .image {
+          position: relative;
+          display: inline-block !important;
+          box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+      }
+  </style>
 @endsection
 
 @section('content')	

@@ -3,6 +3,12 @@
     Web Development
 @endsection
 
+@section('scripts')
+    <script>
+        $('h2#techTitle').html('Industry-focused Web Development')
+    </script>
+@endsection
+
 @section('content')
     <!--Breadcrumb Area-->
     <section class="breadcrumb-areav2" data-background="{{ asset('assets/open/images/service/web-bg.jpg') }}">
@@ -33,8 +39,9 @@
                     <div class="common-heading text-l pl25">
                         <span>Overview</span>
                         <h2>Creative Web Design Service</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry. </p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry.</p>
+                        <p>When building a web application, you can use two types of development: MVP and Product Enhancement. The first is for applications that need to be built from scratch, and the second is great for current products that need further development or improvement.</p>
+                        <p>When building a web application, we recommend the MVP development approach. You’ll achieve a faster release, reduced costs, more time for testing, and tangible feedback.</p>
+                        <p>If you’d like to update, improve or further develop your existing web application, we have strategies for refactoring and bringing legacy code applications up-to-date</p>
                     </div>
                 </div>
             </div>
@@ -122,14 +129,14 @@
             <div class="row upset justify-content-center mt60">
                 <div class="col-lg-4 v-center order1">
                     <div class="image-block1">
-                        <img src="{{ asset('assets/open/') }}/images/process/process-1.jpg" alt="Process" class="img-fluid"/>
+                        <img src="{{ asset('assets/open/images/service/web-p-1.jpg') }}" alt="Process" class="img-fluid"/>
                     </div>
                 </div>
                 <div class="col-lg-7 v-center order2">
                     <div class="ps-block">
                         <span>1</span>
                         <h3>Requirement Gathering</h3>
-                        <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                        <p>This requires us to gather enoungh information about what you need and how best you will like us to produces a customer attrative web application. We have top project analyists that are ready to analyis your project requirements and roll out thier findings in matter of hours.</p>
                     </div>
                 </div>
             </div>
@@ -138,26 +145,26 @@
                     <div class="ps-block">
                         <span>2</span>
                         <h3>Prototype</h3>
-                        <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                        <p>At this stage we are done with infomation gathering and the next stage is to produce a working prototype which will be prsenetd to you for modifications and corrections if need be. These prototype will serve as a finial go ahead order from you to our team of developers.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 v-center order1">
                     <div class="image-block1">
-                        <img src="images/process/process-2.jpg" alt="Process" class="img-fluid"/>
+                        <img src="{{ asset('assets/open/images/service/web-p-2.jpg') }}" alt="Process" class="img-fluid"/>
                     </div>
                 </div>
             </div>
             <div class="row upset justify-content-center mt60">
                 <div class="col-lg-4 v-center order1">
                     <div class="image-block1">
-                        <img src="images/process/process-3.jpg" alt="Process" class="img-fluid"/>
+                        <img src="{{ asset('assets/open/images/service/web-p-3.jpg') }}" alt="Process" class="img-fluid"/>
                     </div>
                 </div>
                 <div class="col-lg-7 v-center order2">
                     <div class="ps-block">
                         <span>3</span>
                         <h3>Deployment</h3>
-                        <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                        <p>Once a project has been completed, our team moves the code to production stage where they deploy the application on the server where futher testing and configurations are done. At this stage your project is production ready remaining few features and modifications.</p>
                     </div>
                 </div>
             </div>
@@ -166,12 +173,12 @@
                     <div class="ps-block">
                         <span>4</span>
                         <h3>Support & Maintenance</h3>
-                        <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                        <p>Once your project is deployed, we can offer our services in manitaing and updating the web applications with the latest technologies and development parttern out there. You can still csll on us to add or remove certain feature. And we will provide support all the way through.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 v-center order1">
                     <div class="image-block1">
-                        <img src="images/process/process-4.jpg" alt="Process" class="img-fluid"/>
+                        <img src="{{ asset('assets/open/images/service/web-p-4.jpg') }}" alt="Process" class="img-fluid"/>
                     </div>
                 </div>
             </div>
@@ -272,76 +279,54 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                <div class="col-lg-6 col-sm-6 mt60 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="isotope_item hover-scale">
-                        <div class="item-image">
-                            <a href="#"><img src="images/portfolio/image-1.jpg" alt="portfolio" class="img-fluid"/> </a>
+                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
+                            <a href="https://swiftresearchers.com/"><img src="{{ asset('assets/open/') }}/images/me/swfit.png" alt="image" class="img-fluid" /> </a>
                         </div>
                         <div class="item-info">
-                            <h4><a href="#">Creative </a></h4>
-                            <p>ios, design</p>
+                            <h4><a href="https://swiftresearchers.com/">Research Agency</a></h4>
+                            <p>Web Application</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                {{-- <div class="col-lg-4 col-sm-4 mt60 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="isotope_item hover-scale">
-                        <div class="item-image">
-                            <a href="#"><img src="images/portfolio/image-2.jpg" alt="portfolio" class="img-fluid"/> </a>
+                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
+                            <a href="https://syticks.com/#"><img style="height: 500px" src="{{ asset('assets/open/') }}/images/me/syticks.png" alt="image" class="img-fluid" /> </a>
                         </div>
                         <div class="item-info">
-                            <h4><a href="#">Brochure Design</a></h4>
+                            <h4><a href="https://syticks.com/#">Ticket App</a></h4>
+                            <p>iOs, Android</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 mt60 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="isotope_item hover-scale">
+                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
+                            <a href="{{ route('portfolio') }}"><img src="{{ asset('assets/open/') }}/images/me/esther.png" alt="image" class="img-fluid" /> </a>
+                        </div>
+                        <div class="item-info">
+                            <h4><a href="{{ route('portfolio') }}">Esthingo Chops</a></h4>
                             <p>Graphic, Print</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                </div> --}}
+                <div class="col-lg-6 col-sm-6 mt60 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="isotope_item hover-scale">
-                        <div class="item-image">
-                            <a href="#"><img src="images/portfolio/image-3.jpg" alt="portfolio" class="img-fluid"/> </a>
+                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
+                            <a href="https://mazzydap.com/"><img src="{{ asset('assets/open/') }}/images/me/mazzy.png" alt="Mazzy Dap" class="img-fluid" /> </a>
                         </div>
                         <div class="item-info">
-                            <h4><a href="#">Ecommerce Development</a></h4>
-                            <p>Web application</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".8s">
-                    <div class="isotope_item hover-scale">
-                        <div class="item-image">
-                            <a href="#"><img src="images/portfolio/image-4.jpg" alt="portfolio" class="img-fluid"/> </a>
-                        </div>
-                        <div class="item-info">
-                            <h4><a href="#">Icon Pack</a></h4>
-                            <p>Android & iOs, Design</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="1s">
-                    <div class="isotope_item hover-scale">
-                        <div class="item-image">
-                            <a href="#"><img src="images/portfolio/image-5.jpg" alt="portfolio" class="img-fluid"/> </a>
-                        </div>
-                        <div class="item-info">
-                            <h4><a href="#">Smart Watch</a></h4>
-                            <p>UI/UX Design</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
-                    <div class="isotope_item hover-scale">
-                        <div class="item-image">
-                            <a href="#"><img src="images/portfolio/image-6.jpg" alt="portfolio" class="img-fluid"/> </a>
-                        </div>
-                        <div class="item-info">
-                            <h4><a href="#">Brochure Design</a></h4>
-                            <p>Graphic, Print</p>
+                            <h4><a href="https://mazzydap.com/">Mazzy Digital Art and Prints</a></h4>
+                            <p>Web, Digital Marketing</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 maga-btn mt60">
-                    <a href="javascript:void(0)" class="btn-outline">View More Projects <i class="fas fa-chevron-right fa-icon"></i></a>
+                    <a href="{{ route('portfolio') }}" class="btn-outline">View More Projects <i class="fas fa-chevron-right fa-icon"></i></a>
                 </div>
             </div>
         </div>
@@ -351,6 +336,6 @@
     <x-ClientReviews />
 
     {{-- CTA --}}
-    <x-cta />
+    <x-CTA />
 
 @endsection

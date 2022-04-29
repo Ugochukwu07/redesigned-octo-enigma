@@ -36,8 +36,8 @@
         .clients-logo {
             background: #050748;
         }
-        @yield('styles')	
     </style>
+    @yield('styles')
  </head>
 <body>  
 
@@ -75,5 +75,6 @@
     <script>
         $('h2.nav-title').html("{{ config('app.name') }}")
     </script>
+    @yield('scripts')
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\AuthControllers;
 use App\Http\Controllers\PagesControllers;
 
 /*
@@ -27,12 +28,19 @@ Route::controller(PagesControllers::class)->group(function(){
         
     //Services
     Route::prefix('services')->name('services.')->group(function(){
-    Route::get('/','services')->name('home');
-    Route::get('/branding','branding')->name('branding');
-    Route::get('/mobile','mobile')->name('mobile');
-    Route::get('/web','web')->name('web');
-    Route::get('/digital-marketing','digital')->name('digital');
+        Route::get('/','services')->name('home');
+        Route::get('/branding','branding')->name('branding');
+        Route::get('/mobile','mobile')->name('mobile');
+        Route::get('/web','web')->name('web');
+        Route::get('/digital-marketing','digital')->name('digital');
     });
+
+    //Auth
+    Route::get('/auth/login', 'login')->name('auth.login');
+});
+
+Route::controller(AuthControllers::class)->group(function(){
+    Route::post('/auth/login/check', 'loginCheck')->name('auth.login.check');
 });
 
 
