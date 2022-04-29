@@ -27,7 +27,7 @@
     <div class="row">
     <div class="col-lg-4">
     <div class="single-image bg-shape-dez mt0 wow fadeIn">
-    <img src="{{ asset('assets/open/') }}/images/service/graphic-design.jpg" alt="image" class="img-fluid no-shadow"/>
+    <img src="{{ asset('assets/open/images/service/brand-bg-2.jpg') }}" alt="image" class="img-fluid no-shadow"/>
     </div>
     </div>
     <div class="col-lg-8 block-1 m-mt50">
@@ -62,7 +62,7 @@
     </div>
     <div class="col-lg-5">
     <div class="single-image wow fadeIn">
-    <img src="images/service/branding-.jpg" alt="image" class="img-fluid no-shadow"/>
+    <img src="{{ asset('assets/open/images/service/brand-bg-3.jpg') }}" alt="image" class="img-fluid no-shadow"/>
     </div>
     </div>
     </div>
