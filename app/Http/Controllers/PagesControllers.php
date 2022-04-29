@@ -20,7 +20,7 @@ class PagesControllers extends Controller
         return view('errors.404');
     }
 
-    public function contact($purpose){
+    public function contact(){
         return view('errors.404');
     }
 
@@ -29,7 +29,7 @@ class PagesControllers extends Controller
     }
 
     public function branding(){
-        return view('errors.404');
+        return view('services.graphics');
     }
 
     public function mobile(){

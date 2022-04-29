@@ -5,14 +5,14 @@
 
 @section('content')
     <!--Breadcrumb Area-->
-    <section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
+    <section class="breadcrumb-areav2" data-background="{{ asset('assets/open/images/service/web-bg.jpg') }}">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="bread-titlev2">
                         <h1 class="wow fadeInUp" data-wow-delay=".2s">Need A Premium & Creative Website Designing?</h1>
                         <p class="mt20 wow fadeInUp" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p>
-                        <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                        <a href="{{ route('contact', ['purpose' => 'web']) }}" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="image-block upset bg-shape wow fadeIn">
-                        <img src="images/about/square-image-1.jpg" alt="image" class="img-fluid"/>
+                        <img src="{{ asset('assets/open/images/service/web-dev.PNG') }}" alt="image" class="img-fluid"/>
                     </div>
                 </div>
                 <div class="col-lg-8 block-1">
@@ -57,51 +57,51 @@
             <div class="row upset link-hover">
                 <div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
                     <div class="s-block">
-                        <div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
+                        <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
                         <h4>Graphic Designing Services</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>We’re also one of the top graphic design firms because we’re drawn to projects that challenge our creativity and get us thinking outside the Cave.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
                     <div class="s-block">
-                        <div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
+                        <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/service2.svg" alt="service" class="img-fluid"/></div>
                         <h4>Responsive Web Designing</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>A responsive design ensures that your website will adapt to each unique device used on your site. Our fully responsive websites adapt to different screen sizes.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
                     <div class="s-block">
-                        <div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
+                        <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/service3.svg" alt="service" class="img-fluid"/></div>
                         <h4>Static Website Designing</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>The simplest way for businesses or individuals who just want to post simple information about themselves or their company to the web world.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
                     <div class="s-block">
-                        <div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
+                        <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/service4.svg" alt="service" class="img-fluid"/></div>
                         <h4>Dynamic Website Designing</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Designed to serve different content to different users based on a variety of factors. This can be a very powerful feature.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
                     <div class="s-block">
-                        <div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
+                        <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/service5.svg" alt="service" class="img-fluid"/></div>
                         <h4>Psd to HTML Service</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>We transform designs into rich, interactive websites that is user-friendly. Experts in content management sys, front-end dev, and custom integrations.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
                     <div class="s-block">
-                        <div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
+                        <div class="s-card-icon"><img src="{{ asset('assets/open/') }}/images/icons/service6.svg" alt="service" class="img-fluid"/></div>
                         <h4>Website Redesign Service</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Our focus is to redesign your existing website with a new look and feel and enhance the website with a better look and feel and functionality. </p>
                     </div>
                 </div>
             </div>
             <div class="-cta-btn mt70">
                 <div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
                     <p>Hire a <span>Dedicated Developer</span></p>
-                    <a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                    <a href="{{ route('contact', ['purpose' => 'branding']) }}" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
             <div class="row upset justify-content-center mt60">
                 <div class="col-lg-4 v-center order1">
                     <div class="image-block1">
-                        <img src="images/process/process-1.jpg" alt="Process" class="img-fluid"/>
+                        <img src="{{ asset('assets/open/') }}/images/process/process-1.jpg" alt="Process" class="img-fluid"/>
                     </div>
                 </div>
                 <div class="col-lg-7 v-center order2">
