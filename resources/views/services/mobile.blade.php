@@ -428,5 +428,5 @@ Mobile App Development
   <x-ClientReviews />
 
   {{-- CTA --}}
-  <x-cta />
+  <x-CTA />
 @endsection
