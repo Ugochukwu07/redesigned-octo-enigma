@@ -13,7 +13,7 @@ class PagesControllers extends Controller
     }
 
     public function portfolio(){
-        return view('errors.404');
+        return view('portfolio');
     }
 
     public function team(){
@@ -21,7 +21,7 @@ class PagesControllers extends Controller
     }
 
     public function contact(){
-        return view('errors.404');
+        return view('contact');
     }
 
     public function services(){
