@@ -17,7 +17,7 @@ class PagesControllers extends Controller
     }
 
     public function team(){
-        return view('errors.404');
+        return view('team');
     }
 
     public function contact(){
