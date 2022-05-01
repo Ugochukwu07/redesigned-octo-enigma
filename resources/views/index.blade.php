@@ -407,7 +407,7 @@
     <div class="owl-carousel testimonial-card-a pl25">
     <div class="testimonial-card">
     <div class="t-text">
-        <p>Creative has a good Software developer’s team, I enjoyed working with them. They were extreme-ly prospective, we worked as a team to find extra specialists to help the core work.</p>
+        <p>{{ config('app.name') }} has a good Software developer’s team, I enjoyed working with them. They were extremely prospective, we worked as a team to find extra specialists to help the core work.</p>
     </div>
     <div class="client-thumbs mt30">
         <div class="media v-center">
@@ -421,7 +421,7 @@
 </div>
 <div class="testimonial-card">
     <div class="t-text">
-        <p>I got help for my website redesign, website working and CMS development from Creative Web Designer Indore. The team is thorough, wonderful to work with and works hard to achieve the results I asked for.</p>
+        <p>I got help for my website redesign, website working and CMS development from {{ config('app.name') }} Indore. The team is thorough, wonderful to work with and works hard to achieve the results I asked for.</p>
     </div>
     <div class="client-thumbs mt30">
         <div class="media v-center">

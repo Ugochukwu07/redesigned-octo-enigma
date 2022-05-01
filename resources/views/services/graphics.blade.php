@@ -11,7 +11,7 @@
                 <div class="col-lg-7">
                     <div class="bread-titlev2">
                         <h1 class="wow fadeInUp" data-wow-delay=".2s">Graphic Design Services</h1>
-                        <p class="mt20 wow fadeInUp" data-wow-delay=".4s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. </p>
+                        <p class="mt20 wow fadeInUp" data-wow-delay=".4s">There's no limit to what you can get designed at {{ config('app.name') }}. Whether you're looking for a spectacular new logo or some stunning flyers, the talented global community of designers at {{ config('app.name') }} can make it happen.</p>
                         <a href="{{ route('contact', ['purpose' => 'branding']) }}" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
                     </div>
                 </div>
@@ -34,7 +34,8 @@
     <div class="common-heading text-l pl25">
     <span>Overview</span>
     <h2>Custom Graphic Design Services We Offer</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry. </p>
+    <p>{{ config('app.name') }} prides itself on it's high quality designers who deliver only the best graphic design services. Find the right design service for you below and get design you'll love today!</p>
+    <p>Good design is more than just readability and clarity of message. Good graphic design, when done right, can transform a business’ logo into a brand; a brand that is consistent, professional and attracts customers to you. Sure, readability and a clear message is important, however, just as important is the presentation of the message.</p>
     </div>
     </div>
     </div>
@@ -48,12 +49,12 @@
     <div class="col-lg-7">
     <div class="text-l service-desc- pr25">
     <h3 class="mb20">We use advanced graphic designing tools to create impressive ideas for you</h3>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>Graphic design is how you communicate your brand and you want it to be consistent. Keeping your brand consistent across all the platforms you use even in how you provide your product and services to your customers is important because it helps create and maintain trust with your current customers as well as demonstrating a professional appearance to potential customers.</p>
     <ul class="service-point-2 mt20">
-      <li># 800+ Mobile Delivered</li>
-      <li># 200+ Team Strength</li>
+      <li># 21+ Mobile Delivered</li>
+      <li># 20+ Team Strength</li>
       <li># User-Friendly Interface</li>
-      <li># 400 Happy Clients</li>
+      <li># 14 Happy Clients</li>
       <li># 95% Repeat business</li>
       <li># Quality Service UX</li>
     </ul>
@@ -87,7 +88,7 @@
     <div class="s-card-icon-large"><img src="{{ asset('assets/open/images/service/brand-logo.jpg') }}" alt="service" class="img-fluid"/></div>
     <div class="s-block-content-large">
       <h4>Logo Designing</h4>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Get the perfect logo and ensure your branding hits the spot with these services. {{ config('app.name') }} is the best for you and your brand, and products.</p>
     </div></div>
     </div>
     <div class="col-lg-6 col-md-12 mt30 wow fadeInUp" data-wow-delay=".4s">
@@ -95,7 +96,7 @@
       <div class="s-card-icon-large"><img src="{{ asset('assets/open/') }}/images/service/packaging-design.jpg" alt="service" class="img-fluid"/></div>
       <div class="s-block-content-large">
         <h4>Packaging Design</h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p>In digital marketing, keeping your brand packaging consistent helps people identify your brand, distinguishing it from your competitors.</p>
       </div></div>
     </div>
     <div class="col-lg-6 col-md-12 mt30 wow fadeInUp" data-wow-delay=".6s">
@@ -103,7 +104,7 @@
         <div class="s-card-icon-large"><img src="{{ asset('assets/open/') }}/images/service/brochure-.jpg" alt="service" class="img-fluid"/></div>
         <div class="s-block-content-large">
           <h4>Brochure Design</h4>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <p>When it comes to brochures, it’s all about the design. A great design will compel your audience to read all about what you’re doing.</p>
         </div></div>
       </div>
       <div class="col-lg-6 col-md-12 mt30 wow fadeInUp" data-wow-delay=".8s">
@@ -161,7 +162,7 @@
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
               <div class="isotope_item hover-scale">
                 <div class="item-image">
-                  <a href="#"><img src="images/portfolio/image-1.jpg" alt="portfolio" class="img-fluid"/> </a>
+                  <a href="#"><img src="{{ asset('assets/open/images/portfolio/paul.png') }}" alt="portfolio" class="img-fluid"/> </a>
                 </div>
                 <div class="item-info">
                   <h4><a href="#">Creative </a></h4>
@@ -172,7 +173,7 @@
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
               <div class="isotope_item hover-scale">
                 <div class="item-image">
-                  <a href="#"><img src="images/portfolio/image-2.jpg" alt="portfolio" class="img-fluid"/> </a>
+                  <a href="#"><img src="{{ asset('assets/open/images/me/esther.png') }}" alt="portfolio" class="img-fluid"/> </a>
                 </div>
                 <div class="item-info">
                   <h4><a href="#">Brochure Design</a></h4>
@@ -183,7 +184,7 @@
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
               <div class="isotope_item hover-scale">
                 <div class="item-image">
-                  <a href="#"><img src="images/portfolio/image-3.jpg" alt="portfolio" class="img-fluid"/> </a>
+                  <a href="#"><img src="{{ asset('assets/open/images/portfolio/ugo.png') }}" alt="portfolio" class="img-fluid"/> </a>
                 </div>
                 <div class="item-info">
                   <h4><a href="#">Ecommerce Development</a></h4>
@@ -194,7 +195,7 @@
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".8s">
               <div class="isotope_item hover-scale">
                 <div class="item-image">
-                  <a href="#"><img src="images/portfolio/image-4.jpg" alt="portfolio" class="img-fluid"/> </a>
+                  <a href="#"><img src="{{ asset('assets/open/images/portfolio/ije-1.png') }}" alt="portfolio" class="img-fluid"/> </a>
                 </div>
                 <div class="item-info">
                   <h4><a href="#">Icon Pack</a></h4>
@@ -205,7 +206,7 @@
             <div class="col-lg-4 wow fadeInUp" data-wow-delay="1s">
               <div class="isotope_item hover-scale">
                 <div class="item-image">
-                  <a href="#"><img src="images/portfolio/image-5.jpg" alt="portfolio" class="img-fluid"/> </a>
+                  <a href="#"><img src="{{ asset('assets/open/images/portfolio/ugo-2.png') }}" alt="portfolio" class="img-fluid"/> </a>
                 </div>
                 <div class="item-info">
                   <h4><a href="#">Smart Watch</a></h4>
@@ -216,7 +217,7 @@
             <div class="col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
               <div class="isotope_item hover-scale">
                 <div class="item-image">
-                  <a href="#"><img src="images/portfolio/image-6.jpg" alt="portfolio" class="img-fluid"/> </a>
+                  <a href="#"><img src="{{ asset('assets/open/images/portfolio/ije-2.png') }}" alt="portfolio" class="img-fluid"/> </a>
                 </div>
                 <div class="item-info">
                   <h4><a href="#">Brochure Design</a></h4>
