@@ -14,7 +14,7 @@
     <ul class="footer-address-list ftr-details">
       <li>
         <span><i class="fas fa-envelope"></i></span>
-        <p>Email <span> <a href="mailto:hydro@storelad.com">hydro@storelad.com</a></span></p>
+        <p>Email <span> <a href="mailto:support@hydrogentech.com.ng">support@hydrogentech.com.ng</a></span></p>
       </li>
       <li>
         <span><i class="fas fa-phone-alt"></i></span>

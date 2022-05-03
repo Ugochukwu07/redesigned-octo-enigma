@@ -259,10 +259,7 @@ class Str
     public static function endsWith($haystack, $needles)
     {
         foreach ((array) $needles as $needle) {
-            if (
-                $needle !== '' && $needle !== null
-                && str_ends_with($haystack, $needle)
-            ) {
+            if ((string) $needle !== '' && str_ends_with($haystack, $needle)) {
                 return true;
             }
         }
@@ -492,10 +489,6 @@ class Str
             return $string;
         }
 
-        if (is_null($length) && PHP_MAJOR_VERSION < 8) {
-            $length = mb_strlen($string, $encoding);
-        }
-
         $segment = mb_substr($string, $index, $length, $encoding);
 
         if ($segment === '') {
@@ -554,7 +547,7 @@ class Str
      */
     public static function padBoth($value, $length, $pad = ' ')
     {
-        return str_pad($value, $length, $pad, STR_PAD_BOTH);
+        return str_pad($value, strlen($value) - mb_strlen($value) + $length, $pad, STR_PAD_BOTH);
     }
 
     /**
@@ -567,7 +560,7 @@ class Str
      */
     public static function padLeft($value, $length, $pad = ' ')
     {
-        return str_pad($value, $length, $pad, STR_PAD_LEFT);
+        return str_pad($value, strlen($value) - mb_strlen($value) + $length, $pad, STR_PAD_LEFT);
     }
 
     /**
@@ -580,7 +573,7 @@ class Str
      */
     public static function padRight($value, $length, $pad = ' ')
     {
-        return str_pad($value, $length, $pad, STR_PAD_RIGHT);
+        return str_pad($value, strlen($value) - mb_strlen($value) + $length, $pad, STR_PAD_RIGHT);
     }
 
     /**
@@ -813,8 +806,8 @@ class Str
         $parts = explode(' ', $value);
 
         $parts = count($parts) > 1
-            ? $parts = array_map([static::class, 'title'], $parts)
-            : $parts = array_map([static::class, 'title'], static::ucsplit(implode('_', $parts)));
+            ? array_map([static::class, 'title'], $parts)
+            : array_map([static::class, 'title'], static::ucsplit(implode('_', $parts)));
 
         $collapsed = static::replace(['-', '_', ' '], '_', implode('_', $parts));
 
@@ -886,6 +879,17 @@ class Str
     }
 
     /**
+     * Remove all "extra" blank space from the given string.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public static function squish($value)
+    {
+        return preg_replace('~(\s|\x{3164})+~u', ' ', preg_replace('~^[\s﻿]+|[\s﻿]+$~u', '', $value));
+    }
+
+    /**
      * Determine if a given string starts with a given substring.
      *
      * @param  string  $haystack
@@ -919,9 +923,7 @@ class Str
 
         $words = explode(' ', static::replace(['-', '_'], ' ', $value));
 
-        $studlyWords = array_map(function ($word) {
-            return static::ucfirst($word);
-        }, $words);
+        $studlyWords = array_map(fn ($word) => static::ucfirst($word), $words);
 
         return static::$studlyCache[$key] = implode($studlyWords);
     }
@@ -988,6 +990,17 @@ class Str
     }
 
     /**
+     * Make a string's first character lowercase.
+     *
+     * @param  string  $string
+     * @return string
+     */
+    public static function lcfirst($string)
+    {
+        return static::lower(static::substr($string, 0, 1)).static::substr($string, 1);
+    }
+
+    /**
      * Make a string's first character uppercase.
      *
      * @param  string  $string
@@ -1013,11 +1026,12 @@ class Str
      * Get the number of words a string contains.
      *
      * @param  string  $string
+     * @param  string|null  $characters
      * @return int
      */
-    public static function wordCount($string)
+    public static function wordCount($string, $characters = null)
     {
-        return str_word_count($string);
+        return str_word_count($string, 0, $characters);
     }
 
     /**

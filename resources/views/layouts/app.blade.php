@@ -38,6 +38,7 @@
         }
     </style>
     @yield('styles')
+    @toastr_css
  </head>
 <body>  
 
@@ -76,5 +77,10 @@
         $('h2.nav-title').html("{{ config('app.name') }}")
     </script>
     @yield('scripts')
+    @jquery
+
+    @toastr_js
+    
+    @toastr_render
 </body>
 </html>

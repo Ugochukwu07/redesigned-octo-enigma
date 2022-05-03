@@ -45,6 +45,8 @@ Route::controller(AuthControllers::class)->group(function(){
 
 
 
+
+
 //Artisan
 Route::get('/artisan/{command}', function($command){
     $output = [];

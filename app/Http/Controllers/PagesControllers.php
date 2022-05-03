@@ -29,6 +29,7 @@ class PagesControllers extends Controller
     }
 
     public function branding(){
+        toastr()->success('Success Message');
         return view('services.graphics');
     }
 
