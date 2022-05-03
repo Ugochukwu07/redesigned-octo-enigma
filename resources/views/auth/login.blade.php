@@ -1,82 +1,88 @@
+@extends('layouts.dashboard.app', ['class' => 'bg-default'])
 
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8"/>
-  <title>Login | {{ config('app.name') }}</title>
-  <meta name="description" content="Login page for the admins id {{ config('app.name') }}">
-  <meta name="keywords" content="Login, Programing, Web Developement, Creative Agency, Marketing Agency">
-  <meta name="author" content="Ekwueme Ugochukwu">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content="#101010">
-  <!--website-favicon-->
-  <link href="images/favicon.png" rel="icon">
-  <!--plugin-css-->
-  <link href="{{ asset('assets/open/') }}/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{{ asset('assets/open/') }}/css/plugin.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- template-style-->
-  <link href="{{ asset('assets/open/') }}/css/style.css" rel="stylesheet">
-  <link href="{{ asset('assets/open/') }}/css/responsive.css" rel="stylesheet">
-  <link href="{{ asset('assets/open/') }}/css/darkmode.css" rel="stylesheet">
-</head>
-<body>
-  <!--Start login Form-->
-  <section class="login-page pad-tb">
-    <div class="v-center m-auto">
-      {{-- <a href="{{ route('home') }}" class="d-block text-center mb30">
-          <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo" class="mega-darks-logo">
-        </a> --}}
-      <div class="login-form-div">        
-        <h4 class="mb40 text-center">Login to your Account</h4>
-        <div class="form-block">
-          <form id="contact-form" method="POST" action="{{ route('auth.login.check') }}">
-            <div class="fieldsets row">
-                @csrf
-              <div class="col-md-12 form-group">
-                <input id="email" type="text" name="email" placeholder="*Email Address">
-                @error('email')
-                   <span class="badge bg-danger">{{$message}}</span>
-                @enderror
-              </div>
-              <div class="col-md-12 form-group">
-                  <input  type="password" name="password"  placeholder="*Password Here">
-                  @error('password')
-                     <span class="badge bg-danger">{{$message}}</span>
-                  @enderror
-              </div>
+@section('content')
+    @include('layouts.dashboard.headers.guest')
+
+    <div class="container mt--8 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+                <div class="card bg-secondary shadow border-0">
+                    <div class="card-header bg-transparent pb-5">
+                        <div class="text-muted text-center mt-2 mb-3"><small>{{ __('Sign in with') }}</small></div>
+                        <div class="btn-wrapper text-center">
+                            <a href="#" class="btn btn-neutral btn-icon">
+                                <span class="btn-inner--icon"><img src="{{ asset('argon') }}/img/icons/common/github.svg"></span>
+                                <span class="btn-inner--text">{{ __('Github') }}</span>
+                            </a>
+                            <a href="#" class="btn btn-neutral btn-icon">
+                                <span class="btn-inner--icon"><img src="{{ asset('argon') }}/img/icons/common/google.svg"></span>
+                                <span class="btn-inner--text">{{ __('Google') }}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <div class="text-center text-muted mb-4">
+                            <small>
+                                    Create new account OR Sign in with these credentials:
+                                    <br>
+                                    Username <strong>admin@argon.com</strong> Password: <strong>secret</strong>
+                            </small>
+                        </div>
+                        <form role="form" method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }} mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                    </div>
+                                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" value="admin@argon.com" required autofocus>
+                                </div>
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                    </div>
+                                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" type="password" value="secret" required>
+                                </div>
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="custom-control custom-control-alternative custom-checkbox">
+                                <input class="custom-control-input" name="remember" id="customCheckLogin" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
+                                <label class="custom-control-label" for="customCheckLogin">
+                                    <span class="text-muted">{{ __('Remember me') }}</span>
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary my-4">{{ __('Sign in') }}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        @if (Route::has('password.request'))
+                            <a href="{{ route('password.request') }}" class="text-light">
+                                <small>{{ __('Forgot password?') }}</small>
+                            </a>
+                        @endif
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="{{ route('register') }}" class="text-light">
+                            <small>{{ __('Create new account') }}</small>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="fieldsets row mt20">
-              <div class="col-md-6 form-group v-center">
-                <button type="submit" class="lnk btn-main bg-btn">Submit <span class="circle"></span></button>
-              </div>
-              <div class="col-md-6 form-group v-center text-right"><a href="#" class="psforgt">Forgot Password?</a>     </div>
-            </div>            
-             {{-- <hr class="mt30 mb30">
-           <div class="text-center">
-              <p class="mb20">or Login with:</p>
-              <div class="social-btnnxx">
-                <a href="#" class="btn-main fb-btn"><i class="fab fa-facebook-f"></i> Facebook</a>                
-                <a href="#" class="btn-main google-btn"><i class="fab fa-google"></i> Google</a>
-              </div>
-            </div> --}}            
-          </form>
         </div>
-      </div>      
-      </div>      
-    </section>
-    <!--End login Form-->
-
-
-  
-<!-- js placed at the end of the document so the pages load faster -->
-<script src="{{ asset('assets/open/') }}/js/vendor/modernizr-3.5.0.min.js"></script>
-<script src="{{ asset('assets/open/') }}/js/jquery.min.js"></script>
-<script src="{{ asset('assets/open/') }}/js/bootstrap.bundle.min.js"></script> 
-<script src="{{ asset('assets/open/') }}/js/plugin.min.js"></script>
-<!--common script file-->
-<script src="{{ asset('assets/open/') }}/js/main.js"></script>
-</body>
-</html>
+    </div>
+@endsection
