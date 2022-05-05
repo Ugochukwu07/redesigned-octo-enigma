@@ -8,20 +8,48 @@
                         <h2 class="mt0">Have Question? Write a Message</h2>
                     </div>
                     <div class="form-block">
-                        <form action="#" method="post" name="feedback-form">
+                        <form action="{{ route('question.save') }}" method="post">
+                            @csrf
                             <div class="fieldsets row">
-                                <div class="col-md-6"><input type="text" placeholder="Full Name" name="name"></div>
-                                <div class="col-md-6"><input type="email" placeholder="Email Address" name="email"></div>
+                                <div class="col-md-6">
+                                    @error('full_name')
+                                        <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                    @enderror
+                                    <input type="text" value="{{ old('full_name') }}" placeholder="Full Name" name="full_name">
+                                </div>
+                                <div class="col-md-6">
+                                    @error('email')
+                                        <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                    @enderror
+                                    <input type="email" value="{{ old('email') }}" placeholder="Email Address" name="email">
+                                </div>
                             </div>
                             <div class="fieldsets row">
-                                <div class="col-md-6"><input type="number" placeholder="Contact Number" name="phone"></div>
-                                <div class="col-md-6"><input type="text" placeholder="Subject" name="subject"></div>
+                                <div class="col-md-6">
+                                    @error('number')
+                                        <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                    @enderror
+                                    <input type="number" value="{{ old('number') }}" placeholder="Contact Number" name="number"></div>
+                                <div class="col-md-6">
+                                    @error('subject')
+                                        <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                    @enderror
+                                    <input type="text" value="{{ old('subject') }}" placeholder="Subject" name="subject">
+                                </div>
                             </div>
-                            <div class="fieldsets"><textarea placeholder="Message" name="message"></textarea></div>
+                            <div class="fieldsets">
+                                @error('message')
+                                    <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                @enderror
+                                <textarea placeholder="Message" name="message">{{ old('message') }}</textarea>
+                            </div>
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" checked="checked">
-                                <label class="custom-control-label" for="customCheck">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Business Name.</label>
+                                <input type="checkbox" class="custom-control-input" id="Terms" name="terms" checked="checked">
+                                <label class="custom-control-label" for="Terms">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Business Name.</label>
                             </div>
+                            @error('terms')
+                                <span class="badge bg-danger">{{ $message }}</span>
+                            @enderror
                             <div class="fieldsets mt20">
                                 <button type="submit" name="submit" class="lnk btn-main bg-btn">Submit <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button>
                             </div>

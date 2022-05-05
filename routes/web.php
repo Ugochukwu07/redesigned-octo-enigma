@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthControllers;
 use App\Http\Controllers\PagesControllers;
+use App\Http\Controllers\TicketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,11 @@ Route::controller(PagesControllers::class)->group(function(){
 
 Route::controller(AuthControllers::class)->group(function(){
     Route::post('/auth/login/check', 'loginCheck')->name('auth.login.check');
+});
+
+//Tickets
+Route::controller(TicketController::class)->name('question.')->group(function(){
+    Route::post('/question/save', 'questionSave')->name('save');
 });
 
 
