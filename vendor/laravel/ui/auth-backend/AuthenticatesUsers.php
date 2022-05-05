@@ -47,7 +47,8 @@ trait AuthenticatesUsers
             if ($request->hasSession()) {
                 $request->session()->put('auth.password_confirmed_at', time());
             }
-
+            
+            toastr()->success('You have Logged In Successfully');
             return $this->sendLoginResponse($request);
         }
 

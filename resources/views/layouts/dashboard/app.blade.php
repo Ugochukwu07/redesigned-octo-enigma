@@ -19,10 +19,12 @@
         <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <!-- Argon CSS -->
         <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
+
+        @toastr_css
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            <form id="logout-form" action="{{ route('dashboard.logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
             @include('layouts.dashboard.navbars.sidebar')
@@ -44,5 +46,13 @@
         
         <!-- Argon JS -->
         <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
+
+        
+    @jquery
+
+    @toastr_js
+    
+    @toastr_render
+</body>
     </body>
 </html>

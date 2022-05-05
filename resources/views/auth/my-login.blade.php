@@ -26,13 +26,13 @@
   <!--Start login Form-->
   <section class="login-page pad-tb">
     <div class="v-center m-auto">
-      {{-- <a href="{{ route('home') }}" class="d-block text-center mb30">
+      {{-- <a href="{{ route('dashboard.home') }}" class="d-block text-center mb30">
           <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo" class="mega-darks-logo">
         </a> --}}
       <div class="login-form-div">        
         <h4 class="mb40 text-center">Login to your Account</h4>
         <div class="form-block">
-          <form id="contact-form" method="POST" action="{{ route('auth.login.check') }}">
+          <form id="contact-form" method="POST" action="{{ route('dashboard.auth.login.check') }}">
             <div class="fieldsets row">
                 @csrf
               <div class="col-md-12 form-group">

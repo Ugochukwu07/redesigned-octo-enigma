@@ -6,7 +6,7 @@
 
 @section('content')
     <!--Breadcrumb Area-->
-		<section class="breadcrumb-area banner-6">
+		<section class="breadcrumb-area banner-6" style="background-image: url('{{ asset('assets/open/images/hero/contact.jpg') }}')">
 			<div class="text-block">
 				<div class="container">
 					<div class="row">
@@ -14,12 +14,12 @@
 							<div class="bread-inner">
 								<div class="bread-menu wow fadeInUp" data-wow-delay=".2s">
 									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="#">Contact</a></li>
+										<li><a href="{{ route('home') }}">Home</a></li>
+										<li><a href="{{ route('contact', ['purpose' => 'all']) }}">Contact</a></li>
 									</ul>
 								</div>
 								<div class="bread-title wow fadeInUp" data-wow-delay=".5s">
-									<h2>Contact</h2>
+									<h2>Contact Us</h2>
 								</div>
 							</div>
 						</div>
@@ -82,7 +82,7 @@
 												<span><i class="fas fa-phone-alt"></i> Phone:</span>
 												<div class="info-body">
 													<p>Assistance hours: Monday – Friday, 9 am to 5 pm</p>
-													<a href="tel:+10000000000">(+91) 0000 000 000</a>
+													<a href="tel:+2348143440606">+234 8143 440 606</a>
 												</div>
 											</div>
 										</div>
@@ -91,16 +91,16 @@
 												<span><i class="fas fa-envelope"></i> Email:</span>
 												<div class="info-body">
 													<p>Our support team will get back to in 24-h during standard business hours.</p>
-													<a href="mailto:info@businessname.com">info@businessname.com</a>
+													<a href="mailto:support@hydrogentech.com.ng">support@hydrogentech.com.ng</a>
 												</div>
 											</div>
 										</div>
 										<div class="skype-card mt30 wow fadeIn" data-wow-delay=".9s">
 											<div class="info-card v-center">
-												<span><i class="fab fa-skype"></i> Skype:</span>
+												<span><i class="fab fa-facebook"></i> Facebook:</span>
 												<div class="info-body">
 													<p>We Are Online: Monday – Friday, 9 am to 5 pm</p>
-													<a href="skype:niwax.company?call">niwax.company</a>
+													<a target="_blank" href="https://www.facebook.com/Hydrogen-Technologies-104079737825405">Hydrogen Technologies</a>
 												</div>
 											</div>
 										</div>
