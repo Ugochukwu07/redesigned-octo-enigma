@@ -1,4 +1,15 @@
 <?php return array (
+  'josiasmontag/laravel-recaptchav3' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Lunaweb\\RecaptchaV3\\Providers\\RecaptchaV3ServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'RecaptchaV3' => 'Lunaweb\\RecaptchaV3\\Facades\\RecaptchaV3',
+    ),
+  ),
   'laravel-frontend-presets/argon' => 
   array (
     'providers' => 

@@ -50,6 +50,13 @@
                             @error('terms')
                                 <span class="badge bg-danger">{{ $message }}</span>
                             @enderror
+                            <div class="form-group">
+                                {!! RecaptchaV3::initJs() !!}
+                                {!! RecaptchaV3::field('contact-us') !!}
+                                @error('g-recaptcha-response')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <div class="fieldsets mt20">
                                 <button type="submit" name="submit" class="lnk btn-main bg-btn">Submit <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button>
                             </div>

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b38614061499e45c76bd197b0e4d87749c36a5ab',
+        'reference' => '4a87088ed940a081680efd0d78dbf615007f81be',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -358,6 +358,15 @@
                 0 => 'v9.10.1',
             ),
         ),
+        'josiasmontag/laravel-recaptchav3' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../josiasmontag/laravel-recaptchav3',
+            'aliases' => array(),
+            'reference' => 'a18b78e3921ea8c265a136bb0823a08e601bef0b',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -388,7 +397,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b38614061499e45c76bd197b0e4d87749c36a5ab',
+            'reference' => '4a87088ed940a081680efd0d78dbf615007f81be',
             'dev_requirement' => false,
         ),
         'laravel/legacy-factories' => array(
