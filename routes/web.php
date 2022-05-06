@@ -50,6 +50,9 @@ Route::controller(AuthControllers::class)->group(function(){
 Route::controller(TicketController::class)->name('question.')->group(function(){
     Route::post('/question/save', 'questionSave')->name('save');
 });
+Route::controller(TicketController::class)->name('contact.')->group(function(){
+    Route::post('/contact/save', 'contactUsSave')->name('save');
+});
 
 
 

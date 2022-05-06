@@ -39,43 +39,60 @@
 							<p class="mb60 mt20">We will catch you as early as we receive the message</p>
 						</div>
 						<div class="form-block">
-							<form id="contactForm" data-bs-toggle="validator" class="shake">
+							<form id="contactForm" class="shake" method="POST" action="{{ route('contact.save') }}">
+								@csrf
 								<div class="row">
-									<div class="form-group col-sm-6">
-										<input type="text"  id="name" placeholder="Enter name" required data-error="Please fill Out">
-										<div class="help-block with-errors"></div>
+									<div class="fieldsets col-sm-6">
+										<input type="text" class="form-control" value="{{ old('full_name') }}" id="name" placeholder="*Enter Your Full Name" name="full_name">
+										@error('full_name')
+											<span class="badge bg-danger">{{ $message }}</span>
+										@enderror
 									</div>
 									<div class="form-group col-sm-6">
-										<input type="email"  id="email" placeholder="Enter email" required>
-										<div class="help-block with-errors"></div>
+										<input type="email" value="{{ old('email') }}" name="email" id="email" placeholder="*Enter Your Email">
+										@error('email')
+											<span class="badge bg-danger">{{ $message }}</span>
+										@enderror
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col-sm-6">
-										<input type="text" id="mobile" placeholder="Enter mobile" required data-error="Please fill Out">
-										<div class="help-block with-errors"></div>
+										<input type="text" value="{{ old('phone') }}" id="Phone" placeholder="*Enter Your Phone" name="phone">
+										@error('phone')
+											<span class="badge bg-danger">{{ $message }}</span>
+										@enderror
 									</div>
 									<div class="form-group col-sm-6">
-										<select name="Dtype" id="Dtype" required>
-											<option value="">Select Requirement</option>
-											<option value="web">web</option>
-											<option value="graphic">graphic</option>
-											<option value="video">video</option>
+										<select name="department" id="department">
+											<option>Select Requirement</option>
+											<option @if($purpose == 'web') selected @endif value="web">Web Development</option>
+											<option @if($purpose == 'mobile') selected @endif value="mobile">Mobile App Development</option>
+											<option @if($purpose == 'branding') selected @endif value="branding">Logo and Branding</option>
+											<option value="support">Techinical Support</option>
 										</select>
-										<div class="help-block with-errors"></div>
+										@error('department')
+											<span class="badge bg-danger">{{ $message }}</span>
+										@enderror
 									</div>
 								</div>
 								<div class="form-group">
-									<textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
-									<div class="help-block with-errors"></div>
+									<textarea id="message" name="message" rows="5" placeholder="*Enter Your Message">{{ old('message') }}</textarea>
+									@error('message')
+										<span class="badge bg-danger">{{ $message }}</span>
+									@enderror
+								</div>
+								<div class="fieldsets">
+									{!! RecaptchaV3::initJs() !!}
+									{!! RecaptchaV3::field('contactUs') !!}
+									@error('g-recaptcha-response')
+										<div class="badge bg-danger">{{ $message }}</div>
+									@enderror
 								</div>
 								<button type="submit" id="form-submit" class="btn lnk btn-main bg-btn">Submit <span class="circle"></span></button>
-								<div id="msgSubmit" class="h3 text-center hidden"></div>
-								<div class="clearfix"></div>
 							</form>
-									</div>
-								</div>
-								<div class="col-lg-5 v-center">
+						</div>
+					</div>
+								<div class="col-lg-6 v-center">
 									<div class="contact-details">
 										<div class="contact-card wow fadeIn" data-wow-delay=".2s">
 											<div class="info-card v-center">

@@ -20,8 +20,8 @@ class PagesControllers extends Controller
         return view('team');
     }
 
-    public function contact(){
-        return view('contact');
+    public function contact($purpose){
+        return view('contact', ['purpose' => $purpose]);
     }
 
     public function services(){
@@ -29,7 +29,6 @@ class PagesControllers extends Controller
     }
 
     public function branding(){
-        toastr()->success('Success Message');
         return view('services.graphics');
     }
 
