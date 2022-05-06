@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('email_list', function (Blueprint $table) {
             $table->id();
             $table->mediumText('full_name');
-            $table->mediumText('email')->unique();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
