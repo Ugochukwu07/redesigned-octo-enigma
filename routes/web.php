@@ -79,4 +79,8 @@ Route::prefix('dashboard')->name('dashboard.')->group(function(){
         Route::get('table-list', function () {return view('pages.tables');})->name('table');
         Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
     });
-}); */
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ */
