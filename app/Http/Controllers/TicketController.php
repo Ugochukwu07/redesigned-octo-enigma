@@ -6,6 +6,7 @@ use App\Models\EmailList;
 use Illuminate\Http\Request;
 use App\Models\ContactQuestion;
 use App\Http\Traits\TicketTraits;
+use App\Notifications\TicketReceived;
 use Illuminate\Support\Facades\Validator;
 
 class TicketController extends Controller
@@ -52,6 +53,17 @@ class TicketController extends Controller
                 toastr()->success('Your ticket has be created successfully');
 
                 //send Notification
+                $client = ContactQuestion::where('ticket_id', $publicId)->first();
+
+                $ticketData = [
+                    'body' => 'We have recived your ticket',
+                    'text' => 'We will get our support team on your request immediatly',
+                    'thankYou' => 'Thank you for chosing ' . config('app.name'),
+                    'url' => route('home')
+                ];
+
+                $client->notify(new TicketReceived($ticketData));
+
             }else{
                 toastr()->error('Something went wrong, try again later');
             }
