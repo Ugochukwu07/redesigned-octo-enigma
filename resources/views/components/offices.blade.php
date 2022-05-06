@@ -13,7 +13,7 @@
             <div class="col-lg-4 col-sm-6 shape-loc wow fadeInUp" data-wow-delay=".2s">
                 <div class="office-card">
                     <div class="skyline-img" data-tilt data-tilt-max="4" data-tilt-speed="1000">
-                        <img src="{{ asset('assets/open/') }}/img/office/nau.jpg" alt="Awka, Anambra" class="img-fluid" />
+                        <img src="{{ asset('assets/open/img/office/office-1.jpg') }}" alt="Awka, Anambra" class="img-fluid" />
                     </div>
                     <div class="office-text">
                         <h4>Awka, Anambra</h4>

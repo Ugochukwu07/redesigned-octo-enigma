@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-lg-6 v-center">
                     <div class="enquire-image">
-                        <img src="{{ asset('assets/open/') }}/images/me/contact.jpg" alt="enquire" class="img-fluid rounded" />
+                        <img src="{{ asset('assets/open/images/hero/contact-index.jpg') }}" alt="enquire" class="img-fluid rounded" />
                     </div>
                 </div>
             </div>
