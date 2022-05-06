@@ -13,13 +13,13 @@
                             <div class="fieldsets row">
                                 <div class="col-md-6">
                                     @error('full_name')
-                                        <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                        <span class="alert alert-danger mt-1 mb-1">{{ $message }}</span>
                                     @enderror
                                     <input type="text" value="{{ old('full_name') }}" placeholder="Full Name" name="full_name">
                                 </div>
                                 <div class="col-md-6">
                                     @error('email')
-                                        <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                        <span class="alert alert-danger mt-1 mb-1">{{ $message }}</span>
                                     @enderror
                                     <input type="email" value="{{ old('email') }}" placeholder="Email Address" name="email">
                                 </div>
@@ -27,32 +27,32 @@
                             <div class="fieldsets row">
                                 <div class="col-md-6">
                                     @error('number')
-                                        <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                        <span class="alert alert-danger mt-1 mb-1">{{ $message }}</span>
                                     @enderror
                                     <input type="number" value="{{ old('number') }}" placeholder="Contact Number" name="number"></div>
                                 <div class="col-md-6">
                                     @error('subject')
-                                        <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                        <span class="alert alert-danger mt-1 mb-1">{{ $message }}</span>
                                     @enderror
                                     <input type="text" value="{{ old('subject') }}" placeholder="Subject" name="subject">
                                 </div>
                             </div>
                             <div class="fieldsets">
                                 @error('message')
-                                    <span class="badge mb-1 bg-danger">{{ $message }}</span>
+                                    <span class="alert alert-danger mt-1 mb-1">{{ $message }}</span>
                                 @enderror
                                 <textarea placeholder="Message" name="message">{{ old('message') }}</textarea>
                             </div>
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="Terms" name="terms" checked="checked">
-                                <label class="custom-control-label" for="Terms">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Business Name.</label>
+                                <label class="custom-control-label" for="Terms">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of {{ config('app.name') }}.</label>
                             </div>
                             @error('terms')
-                                <span class="badge bg-danger">{{ $message }}</span>
+                                <span class="alert alert-danger mt-1 mb-1">{{ $message }}</span>
                             @enderror
-                            <div class="form-group">
+                            <div class="fieldsets">
                                 {!! RecaptchaV3::initJs() !!}
-                                {!! RecaptchaV3::field('contact-us') !!}
+                                {!! RecaptchaV3::field('askQuestion') !!}
                                 @error('g-recaptcha-response')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
