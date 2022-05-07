@@ -50,13 +50,14 @@
                             @error('terms')
                                 <span class="alert alert-danger mt-1 mb-1">{{ $message }}</span>
                             @enderror
-                            <div class="fieldsets">
-                                {!! RecaptchaV3::initJs() !!}
-                                {!! RecaptchaV3::field('askQuestion') !!}
-                                @error('g-recaptcha-response')
-                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                @enderror
-                            </div>
+                            @if (request()->is('home'))
+                                <div class="fieldsets">
+                                    {!! RecaptchaV3::field('askQuestion') !!}
+                                    @error('g-recaptcha-response')
+                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+							@endif
                             <div class="fieldsets mt20">
                                 <button type="submit" name="submit" class="lnk btn-main bg-btn">Submit <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button>
                             </div>

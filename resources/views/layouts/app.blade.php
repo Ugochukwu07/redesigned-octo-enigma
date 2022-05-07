@@ -5,11 +5,9 @@
     <meta charset="utf-8"/>
     <title>@yield('title') | Hydrogen Technologies</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-
-    <meta name="description" content="Creative Agency, Marketing Agency Template">
-    <meta name="keywords" content="Creative Agency, Marketing Agency">
-    <meta name="author" content="rajesh-doot">
+    <meta name="description" content="We create websites and softwares with meaning. Great Web design speaks to your head and your heart. It makes you feel different, and think differently. It makes you remember, and respond. That’s what we aim for, to go from insight to ideas to design that connects. To craft things with intelligence, sensitivity and precision.">
+    <meta name="keywords" content="Software, Company, Creative Agency, Marketing Agency, Web Development, Branding">
+    <meta name="author" content="Ekwueme Ugochukwu">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#c7ecff">
@@ -24,7 +22,7 @@
 	<link href="{{ asset('assets/open/') }}/css/style.css" rel="stylesheet">
 	<link href="{{ asset('assets/open/') }}/css/responsive.css" rel="stylesheet">	
 	<link href="{{ asset('assets/open/') }}/css/darkmode.css" rel="stylesheet">
-<!-- Google Materalize fonts -->
+    <!-- Google Materalize fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         .custom-nav .sbmenu > a::before {
@@ -36,6 +34,7 @@
     </style>
     @yield('styles')
     @toastr_css
+    {!! RecaptchaV3::initJs() !!}
  </head>
 <body>  
 

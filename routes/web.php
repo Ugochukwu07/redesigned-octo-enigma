@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthControllers;
 use App\Http\Controllers\PagesControllers;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\ContactUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,12 +48,15 @@ Route::controller(AuthControllers::class)->group(function(){
 });
 
 //Tickets
-Route::controller(TicketController::class)->name('question.')->group(function(){
-    Route::post('/question/save', 'questionSave')->name('save');
+Route::controller(TicketController::class)->group(function(){
+    Route::name('question.')->group(function(){
+        Route::post('/question/save', 'questionSave')->name('save');
+    });
+    Route::name('contact.')->group(function(){
+        Route::post('/contact/save', 'contactUsSave')->name('save');
+    });
 });
-Route::controller(TicketController::class)->name('contact.')->group(function(){
-    Route::post('/contact/save', 'contactUsSave')->name('save');
-});
+
 
 
 

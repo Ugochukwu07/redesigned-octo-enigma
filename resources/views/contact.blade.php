@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('styles')
+	<style>
+		.grecaptcha-badge { visibility: hidden !important; }
+	</style>
+@endsection
+
 @section('title')
     Contact Us
 @endsection
@@ -39,7 +45,7 @@
 							<p class="mb60 mt20">We will catch you as early as we receive the message</p>
 						</div>
 						<div class="form-block">
-							<form id="contactForm" class="shake" method="POST" action="{{ route('contact.save') }}">
+							<form action="{{ route('contact.save') }}" method="post">
 								@csrf
 								<div class="row">
 									<div class="fieldsets col-sm-6">
@@ -81,13 +87,20 @@
 										<span class="badge bg-danger">{{ $message }}</span>
 									@enderror
 								</div>
-								<div class="fieldsets">
-									{!! RecaptchaV3::initJs() !!}
+								{{-- <div class="fieldsets">
 									{!! RecaptchaV3::field('contactUs') !!}
 									@error('g-recaptcha-response')
 										<div class="badge bg-danger">{{ $message }}</div>
 									@enderror
 								</div>
+								<div class="fieldsets text-center">
+									<div class="p-3">
+									<div id="contact_us_id"></div></div>
+									{!!  GoogleReCaptchaV3::renderOne('contact_us_id','contact_us') !!}
+								</div>
+								@error('g-recaptcha-response')
+									<div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+								@enderror --}}
 								<button type="submit" id="form-submit" class="btn lnk btn-main bg-btn">Submit <span class="circle"></span></button>
 							</form>
 						</div>
