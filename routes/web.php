@@ -55,8 +55,9 @@ Route::controller(TicketController::class)->group(function(){
     Route::name('contact.')->group(function(){
         Route::post('/contact/save', 'contactUsSave')->name('save');
     });
+    //NewsLetter
+    Route::post('/newsletter/save', 'addNewEmailToNewsletter')->name('newsletter.save');
 });
-
 
 
 

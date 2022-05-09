@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
     <x-Insights />
     <div class="footer-row2">
     <div class="container">

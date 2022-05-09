@@ -9,8 +9,9 @@
         </div>
         <div class="col-lg-6 v-center">
           <div class="email-subs-form">
-            <form>
-              <input type="email" placeholder="Email Your Address" name="emails">
+            <form action="{{ route('newsletter.save') }}" method="POST">
+              @csrf
+              <input type="email" placeholder="Email Your Address" name="news_email">
               <button type="submit" name="submit" class="lnk btn-main bg-btn">Subscribe <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button>
             </form>
           </div>
