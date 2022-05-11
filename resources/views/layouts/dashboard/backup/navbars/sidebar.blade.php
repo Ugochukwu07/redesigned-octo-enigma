@@ -85,21 +85,20 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
-                        {{-- <i class="fab fa-circle-08"></i> --}}
-                        <i class="fa fa-users" aria-hidden="true" style="color: #f4645f;"></i>
-                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Our Teams') }}</span>
+                        <i class="fab fa-laravel" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Laravel Examples') }}</span>
                     </a>
 
-                    <div class="collapse" id="navbar-examples">
+                    <div class="collapse show" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('dashboard.team.all') }}">
-                                    {{ __('View') }}
+                                <a class="nav-link" href="{{ route('dashboard.profile.edit') }}">
+                                    {{ __('User profile') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('dashboard.team.add') }}">
-                                    {{ __('New') }}
+                                <a class="nav-link" href="{{ route('dashboard.user.index') }}">
+                                    {{ __('User Management') }}
                                 </a>
                             </li>
                         </ul>

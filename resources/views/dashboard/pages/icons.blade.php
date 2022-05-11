@@ -50,7 +50,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard.home') }}">
+                <a class="nav-link" href="{{ route('dashboard.index') }}">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                 </a>
             </li>
