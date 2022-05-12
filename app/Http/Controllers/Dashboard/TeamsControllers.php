@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Members;
 use App\Models\MemberStatus;
 use Illuminate\Http\Request;
 use stdClass;
@@ -35,8 +36,10 @@ class TeamsControllers extends Controller
 
 
     //team memebers
-    public function TeamMember(){
-        return view('dashboard.team.index');
+    public function TeamMembers(){
+
+        $teamMember = Members::all();
+        return view('dashboard.team.index', ['teamMember' => $teamMember]);
     }
 
     public function addTeamMember(){
@@ -45,10 +48,91 @@ class TeamsControllers extends Controller
     }
 
     public function addTeamMemberSave(Request $request){
-        dd($request->all());
-
+        //dd($request->input('image'));
+        
         $request->validate([
             'image' => 'required|mimes:png,jpg,jpeg,gif,svg|max:2048',
+            'name' => 'required',
+            'email' => 'required|email|unique:members,email',
+            'status' => 'numeric',
+            'facebook_link' => 'url',
+            'twitter_link' => 'url',
+            'linkedkin_link' => 'url',
+            'github_link' => 'url',
+            'description' => 'required'
         ]);
+        
+        //Add members
+        if($request->file('image')) {
+            $file = $request->file('image');
+
+            //$filename = time().'_'.$file->getClientOriginalName();
+            $filename = $file->hashName();
+
+            // File upload location
+            $location = 'storage/teams';
+
+            // Upload file
+            $file->move($location,$filename);
+
+            $member = Members::create([
+                'image' => $location . '/' . $filename,
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'member_status_id' => $request->input('status'),
+                'facebook_link' => $request->input('facebook_link'),
+                'twitter_link' => $request->input('twitter_link'),
+                'linkedin_link' => $request->input('linkedin_link'),
+                'github_link' => $request->input('github_link'),
+                'description' => $request->input('description'),
+                'users_id' => auth()->user()->id
+            ]);
+
+            //Notify Member
+
+            toastr()->success('Member Added Successfully');
+            
+            return redirect()->route('dashboard.team.all');
+        }else{
+            toastr()->error('File upload failed');
+            return back();
+        }
+    }
+
+    //edit
+    public function editTeamMember($id){
+        $member = Members::find($id);
+
+        $memberStatus = MemberStatus::all();
+
+        return view('dashboard.team.edit', [
+            'member' => $member,
+            'memberStatus' => $memberStatus
+        ]);
+    }
+
+    //save edit
+    public function editTeamMemberSave(Request $request){
+        $request->validate([
+            'image' => 'mimes:png,jpg,jpeg,gif,svg|max:2048',
+            'name' => 'required',
+            'email' => 'required|email|unique:members,email,' . $request->input('users_id'),
+            'status' => 'required|numeric',
+            'facebook_link' => 'url',
+            'twitter_link' => 'url',
+            'linkedkin_link' => 'url',
+            'github_link' => 'url',
+            'description' => 'required'
+        ]);
+    }
+
+    //Delete Member
+    public function deleteTeamMember($id){
+        $member = Members::find($id);
+
+        $member->delete();
+        toastr()->success('Member has been deleted successfully.');
+        
+        return back();
     }
 }
