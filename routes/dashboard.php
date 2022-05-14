@@ -46,7 +46,7 @@ Route::prefix('dashboard')->name('dashboard.')->group(function(){
             Route::get('/add', 'addTeamMember')->name('add');
             Route::post('/save', 'addTeamMemberSave')->name('save');
             Route::get('/{id}/edit', 'editTeamMember')->where(['id' => '[0-9]+'])->name('edit');
-            Route::get('/edit/save', 'editTeamMemberSave')->where(['id' => '[0-9]+'])->name('edit.save');
+            Route::post('/edit/save', 'editTeamMemberSave')->where(['id' => '[0-9]+'])->name('edit.save');
             Route::get('/{id}/delete', 'deleteTeamMember')->where(['id' => '[0-9]+'])->name('delete');
         });
     });

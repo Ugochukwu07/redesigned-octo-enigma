@@ -12,6 +12,6 @@ class MemberStatus extends Model
 
     //fillables
     protected $fillable = [
-        'name', 'description', 'users_id'
+        'name', 'description', 'users_id', 'department'
     ];
 }

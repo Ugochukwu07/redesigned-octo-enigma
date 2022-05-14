@@ -31,6 +31,23 @@
                                         </span>
                                     @endif
                                 </div>
+                                <div class="form-group{{ $errors->has('department') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="department">{{ __('Member department') }}</label>
+                                    <select class="form-control form-control-alternative{{ $errors->has('department') ? ' is-invalid' : '' }}" name="department" id="department">
+                                        <option></option>
+                                        <option value="1">Logo and Branding</option>
+                                        <option value="2">Web Developemnt</option>
+                                        <option value="3">Mobile Apps</option>
+                                        <option value="4">UI/UX</option>
+                                        <option value="5">Technical Support</option>
+                                    </select>
+                                    @if ($errors->has('department'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('department') }}</strong>
+                                        </span>
+                                    @endif
+                                    <a class="text-underline text-info float-right" href="{{ route('dashboard.team.status.add') }}">Add new Status</a>
+                                </div>
                                 <div class="form-group{{ $errors->has('description') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="description">{{ __('Description') }}</label>
                                     <textarea name="description" class="form-control" placeholder="Status Description" id="description" cols="30" rows="10">{{ old('description') }}</textarea>

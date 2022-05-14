@@ -50,8 +50,8 @@
                                         {{ $member->stack->name }}
                                     </td>
                                     <td>
-                                        <a class="text-info" href="{{ route('dashboard.team.edit', ['id' => $member->id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
-                                        <a class="text-danger" href="{{ route('dashboard.team.delete', ['id' => $member->id]) }}"><i class="fa-solid fa-trash-can"></i></a>
+                                        <a class="text-info mx-2" title="edit" href="{{ route('dashboard.team.edit', ['id' => $member->id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a class="text-danger mx-2" title="delete" href="{{ route('dashboard.team.delete', ['id' => $member->id]) }}"><i class="fa-solid fa-trash-can"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -27,7 +27,10 @@ Route::get('/welcome', function () {
 Route::controller(PagesControllers::class)->group(function(){
     Route::get('/','index')->name('home');
     Route::get('/portfolio','portfolio')->name('portfolio');
+
     Route::get('/team','team')->name('team');
+    Route::get('/team/{id}','teamSingle')->name('team.single');
+
     Route::get('/contact/{purpose}','contact')->where(['purpose' => '[a-z\s]+'])->name('contact');
         
     //Services

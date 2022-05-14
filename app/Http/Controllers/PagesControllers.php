@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Members;
 use Illuminate\Http\Request;
 
 class PagesControllers extends Controller
@@ -17,7 +18,19 @@ class PagesControllers extends Controller
     }
 
     public function team(){
-        return view('team');
+        $owners = Members::where('member_status_id', 1)->get();
+        $teams = Members::all();
+        return view('team.index', [
+            'owners' => $owners,
+            'teams' => $teams
+        ]);
+    }
+
+    public function teamSingle($id){
+        $member = Members::where('id', $id)->first();
+        return view('team.single', [
+            'member' => $member
+        ]);
     }
 
     public function contact($purpose){

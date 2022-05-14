@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Http\Controllers\Controller;
+use stdClass;
 use App\Models\Members;
 use App\Models\MemberStatus;
 use Illuminate\Http\Request;
-use stdClass;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 
 class TeamsControllers extends Controller
 {
@@ -18,13 +19,15 @@ class TeamsControllers extends Controller
     public function addStatusSave(Request $request){
         $request->validate([
             'name' => 'required|unique:member_status,name',
-            'description' => 'required'
+            'description' => 'required',
+            'department' => 'required|numeric'
         ]);
 
         //save to database
         MemberStatus::create([
             'name' => $request->input('name'),
             'description' => $request->input('description'),
+            'department' => $request->input('department'),
             'users_id' => auth()->user()->id
         ]);
 
@@ -32,6 +35,31 @@ class TeamsControllers extends Controller
         //tostr
         toastr()->success('Added Memebr Status successfully');
         return redirect()->route('dashboard.team.add');
+    }
+
+    public function updateStatus(){
+        return view('dashboard.team.status.update');
+    }
+
+    public function updateStatusSave(Request $request){
+        $request->validate([
+            'name' => 'required|unique:member_status,name',
+            'description' => 'required',
+            'department' => 'required|numeric'
+        ]);
+
+        //save to database
+        MemberStatus::where('id', $request->input('status_id'))->update([
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'department' => $request->input('department'),
+            'users_id' => auth()->user()->id
+        ]);
+
+        //return redirect()->route('dashboard.team.status.all');
+        //tostr
+        toastr()->success('Updated Memebr Status successfully');
+        return redirect()->route('dashboard.team.all');
     }
 
 
@@ -122,13 +150,58 @@ class TeamsControllers extends Controller
             'twitter_link' => 'url',
             'linkedkin_link' => 'url',
             'github_link' => 'url',
-            'description' => 'required'
+            'description' => 'required',
+            'member_id' => 'required'
         ]);
+
+        $image = Members::select('image')->where('id', $request->input('member_id'))->first();
+
+        if($request->file('image')) {
+            //delete the old file data
+            if($image->image != ''){
+                File::delete($image->image);
+            }
+
+            $file = $request->file('image');
+
+            //$filename = time().'_'.$file->getClientOriginalName();
+            $filename = $file->hashName();
+
+            // File upload location
+            $location = 'storage/teams';
+
+            // Upload file
+            $file->move($location,$filename);
+            $fullLocation = $location . '/' . $filename;
+        }else{
+            $fullLocation = $image->image;
+        }
+
+        Members::where('id', $request->input('member_id'))->update([
+            'image' => $fullLocation,
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'member_status_id' => $request->input('status'),
+                'facebook_link' => $request->input('facebook_link'),
+                'twitter_link' => $request->input('twitter_link'),
+                'linkedin_link' => $request->input('linkedin_link'),
+                'github_link' => $request->input('github_link'),
+                'description' => $request->input('description'),
+                'users_id' => auth()->user()->id
+        ]);
+        //Notify Member
+
+        toastr()->success('Member Updated Successfully');
+                
+        return redirect()->route('dashboard.team.all');
     }
 
     //Delete Member
     public function deleteTeamMember($id){
         $member = Members::find($id);
+        $image = Members::select('image')->where('id', $id)->first();
+
+        File::delete($image->image);
 
         $member->delete();
         toastr()->success('Member has been deleted successfully.');
