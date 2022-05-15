@@ -16,7 +16,7 @@ class Members extends Model
     protected $fillable = [
         'name', 'email', 'facebook_link', 'github_link',
         'twitter_link', 'linkedin_link', 'description',
-        'member_status_id', 'users_id', 'image'
+        'member_status_id', 'users_id', 'image', 'admin'
     ];
 
     public function stack(){

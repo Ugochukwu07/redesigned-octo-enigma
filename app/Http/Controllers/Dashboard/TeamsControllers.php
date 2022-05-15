@@ -114,6 +114,7 @@ class TeamsControllers extends Controller
                 'linkedin_link' => $request->input('linkedin_link'),
                 'github_link' => $request->input('github_link'),
                 'description' => $request->input('description'),
+                'admin' => $request->input('admin') ? 1 : 0,
                 'users_id' => auth()->user()->id
             ]);
 
@@ -126,7 +127,7 @@ class TeamsControllers extends Controller
                 'thankYou' => 'Thank you foe joing ' . config('app.name') . ". We're happy to have you."
                 
             ];
-            $member->notify(new NewTeamMember($memberData);
+            $member->notify(new NewTeamMember($memberData));
 
             toastr()->success('Member Added Successfully');
             
@@ -197,6 +198,7 @@ class TeamsControllers extends Controller
                 'linkedin_link' => $request->input('linkedin_link'),
                 'github_link' => $request->input('github_link'),
                 'description' => $request->input('description'),
+                'admin' => $request->input('admin') ? 1 : 0,
                 'users_id' => auth()->user()->id
         ]);
         //Notify Member

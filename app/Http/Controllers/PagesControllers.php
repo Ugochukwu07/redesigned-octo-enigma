@@ -18,8 +18,8 @@ class PagesControllers extends Controller
     }
 
     public function team(){
-        $owners = Members::where('member_status_id', 1)->get();
-        $teams = Members::all();
+        $owners = Members::where('admin', 1)->get();
+        $teams = Members::where('admin', 0)->get();
         return view('team.index', [
             'owners' => $owners,
             'teams' => $teams
