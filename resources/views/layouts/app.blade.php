@@ -31,6 +31,13 @@
         .clients-logo {
             background: #050748;
         }
+
+        .xlogo{
+            width: 170px;
+        }
+
+        .grecaptcha-badge { visibility: hidden !important; }
+
     </style>
     @yield('styles')
     @toastr_css

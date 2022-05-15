@@ -7,6 +7,7 @@ use App\Models\Members;
 use App\Models\MemberStatus;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Notifications\NewTeamMember;
 use Illuminate\Support\Facades\File;
 
 class TeamsControllers extends Controller
@@ -117,6 +118,15 @@ class TeamsControllers extends Controller
             ]);
 
             //Notify Member
+            $member = Members::where('email', $request->input('email'))->first();
+            $memberData = [
+                'body' => 'Your profile has been successfully uploaded to ' . config('app.name') . ' as a team member.',
+                'text' => 'View Profile',
+                'url' => route('team.single', ['id' => $member->id]),
+                'thankYou' => 'Thank you foe joing ' . config('app.name') . ". We're happy to have you."
+                
+            ];
+            $member->notify(new NewTeamMember($memberData);
 
             toastr()->success('Member Added Successfully');
             

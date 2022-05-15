@@ -3,8 +3,8 @@
         <div class="container-fluid m-pad">
             <div class="menu-header">
                <div class="dsk-logo"><a class="nav-brand" href="./">
-                  <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo" class="mega-white-logo"/>
-                  <img src="{{ asset('assets/open/') }}/images/me/logo.png" alt="Logo" class="mega-darks-logo"/>
+                  <img src="{{ asset('assets/logo/5/full.png') }}" alt="Logo" class="xlogo mega-white-logo"/>
+                  <img src="{{ asset('assets/logo/3/full.png') }}" alt="Logo" class="xlogo mega-darks-logo"/>
                   </a>
                </div>
                <div class="custom-nav" role="navigation">

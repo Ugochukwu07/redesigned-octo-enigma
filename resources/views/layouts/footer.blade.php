@@ -4,8 +4,8 @@
     <div class="container">
     <div class="row justify-content-between">
     <div class="col-lg-3 col-sm-6  ftr-brand-pp">
-     <a class="navbar-brand mt30 mb25 f-dark-logo" href="{{ route('home') }}"> <img src="{{ asset('assets/open/') }}/images/me/logo.png" width="160px" alt="Logo"/></a>
-     <a class="navbar-brand mt30 mb25 f-white-logo" href="{{ route('home') }}"> <img src="{{ asset('assets/open/') }}/images/me/logo.png" width="160px" alt="Logo" /></a>
+     <a class="navbar-brand mt30 mb25 f-dark-logo" href="{{ route('home') }}"> <img src="{{ asset('assets/logo/3/full-v.png') }}" width="160px" alt="Logo"/></a>
+     <a class="navbar-brand mt30 mb25 f-white-logo" href="{{ route('home') }}"> <img src="{{ asset('assets/logo/5/full-v.png') }}" width="160px" alt="Logo" /></a>
      <p>We are the leading software development company in Anambra, Nigeria. We build the most engaging and on-demand software applications in Nigeria.</p>
      <a href="{{ route('contact', ['purpose' => 'all']) }}" class="btn-main bg-btn3 lnk mt20">Become Partner <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
     </div>
@@ -37,7 +37,7 @@
         <li><a href="javascript:void(0)">License & Copyright</a></li>
       </ul>
     </div>
-    <div class="col-lg-3 col-sm-6 footer-blog-">
+    {{-- <div class="col-lg-3 col-sm-6 footer-blog-">
       <h5>Latest Blogs</h5>
       <div class="single-blog-">
         <div class="post-thumb"><a href="#"><img src="{{ asset('assets/open/') }}/images/blog/blog-small.jpg" alt="blog"></a></div>
@@ -53,28 +53,28 @@
           <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
         </div>
       </div>
+    </div> --}}
     </div>
     </div>
     </div>
-    </div>
-    <div class="footer-brands">
-    <div class="container">
-    <div class="row">
-    <div class="col-lg-4 v-center">
-    <h5 class="mb10">Top App Development Companies</h5>
-    <p>We design, build and deploy the best mobile applications in Nigeria that meet customers' satisfaction.</p>
-    </div>
-      <div class="col-lg-8 v-center">
-        <ul class="footer-badges-">
-          <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-a.png" alt="badges"></a></li>
-          <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-b.png" alt="badges"></a></li>
-          <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-c.png" alt="badges"></a></li>
-          <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-d.png" alt="badges"></a></li>
-        </ul>
+{{--     <div class="footer-brands">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 v-center">
+            <h5 class="mb10">Top App Development Companies</h5>
+            <p>We design, build and deploy the best mobile applications in Nigeria that meet customers' satisfaction.</p>
+          </div>
+          <div class="col-lg-8 v-center">
+            <ul class="footer-badges-">
+              <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-a.png" alt="badges"></a></li>
+              <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-b.png" alt="badges"></a></li>
+              <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-c.png" alt="badges"></a></li>
+              <li><a href="#"><img src="{{ asset('assets/open/') }}/images/about/badges-d.png" alt="badges"></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-    </div>
+    </div> --}}
     <div class="footer-row3">
     <div class="copyright">
     <div class="container">
