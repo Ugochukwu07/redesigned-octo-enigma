@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#c7ecff">
     <!--website-favicon-->
-    <link href="{{ asset('assets/open/') }}/images/favicon.png" rel="icon">
+    <link href="{{ asset('assets/logo/3/favi.png') }}" rel="icon">
     <!--plugin-css-->
     <link href="{{ asset('assets/open/') }}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('assets/open/') }}/css/plugin.min.css" rel="stylesheet">
