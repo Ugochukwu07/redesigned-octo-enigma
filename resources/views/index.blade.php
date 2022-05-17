@@ -209,7 +209,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-sm-8 mt60 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-lg-6 col-sm-6 mt60 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="isotope_item hover-scale">
                         <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
                             <a href="https://swiftresearchers.com/"><img src="{{ asset('assets/open/') }}/images/me/swfit.png" alt="image" class="img-fluid" /> </a>
@@ -220,10 +220,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 col-sm-6 mt60 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="isotope_item hover-scale">
+                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
+                            <a href="https://mazzydap.com/"><img src="{{ asset('assets/open/') }}/images/me/mazzy.png" alt="Mazzy Dap" class="img-fluid" /> </a>
+                        </div>
+                        <div class="item-info">
+                            <h4><a href="https://mazzydap.com/">Mazzy Digital Art and Prints</a></h4>
+                            <p>Web, Digital Marketing</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-4 col-sm-4 mt60 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="isotope_item hover-scale">
                         <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
-                            <a href="https://syticks.com/#"><img style="height: 500px" src="{{ asset('assets/open/') }}/images/me/syticks.png" alt="image" class="img-fluid" /> </a>
+                            <a href="https://syticks.com/#"><img {{-- style="height: 500px" --}} src="{{ asset('assets/open/') }}/images/me/syticks.png" alt="image" class="img-fluid" /> </a>
                         </div>
                         <div class="item-info">
                             <h4><a href="https://syticks.com/#">Ticket App</a></h4>
@@ -242,18 +253,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-sm-8 mt60 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="isotope_item hover-scale">
-                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
-                            <a href="https://mazzydap.com/"><img src="{{ asset('assets/open/') }}/images/me/mazzy.png" alt="Mazzy Dap" class="img-fluid" /> </a>
-                        </div>
-                        <div class="item-info">
-                            <h4><a href="https://mazzydap.com/">Mazzy Digital Art and Prints</a></h4>
-                            <p>Web, Digital Marketing</p>
-                        </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-10 text-center col-10 mx-auto">
+                        <a href="{{ route('portfolio') }}" class="btn-main bg-btn lnk wow fadeInUp" data-wow-delay=".6s">View Case Studies <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
     <!--End Portfolio-->

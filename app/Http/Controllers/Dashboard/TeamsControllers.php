@@ -12,7 +12,20 @@ use Illuminate\Support\Facades\File;
 
 class TeamsControllers extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     //Status for team mebers
+    public function allStatus(){
+        $memberStatus = MemberStatus::all();
+
+        return view('dashboard.team.status.index', [
+            'memberStatus' => $memberStatus
+        ]);
+    }
+
     public function addStatus(){
         return view('dashboard.team.status.add');
     }
@@ -35,16 +48,20 @@ class TeamsControllers extends Controller
         //return redirect()->route('dashboard.team.status.all');
         //tostr
         toastr()->success('Added Memebr Status successfully');
-        return redirect()->route('dashboard.team.add');
+        //return redirect()->route('dashboard.team.status.all');
+        return back();
     }
 
-    public function updateStatus(){
-        return view('dashboard.team.status.update');
+    public function editStatus($id){
+        $status = MemberStatus::find($id);
+        return view('dashboard.team.status.edit', [
+            'status' => $status
+        ]);
     }
 
-    public function updateStatusSave(Request $request){
+    public function editStatusSave(Request $request){
         $request->validate([
-            'name' => 'required|unique:member_status,name',
+            'name' => 'required|unique:member_status,name,' . $request->input('status_id'),
             'description' => 'required',
             'department' => 'required|numeric'
         ]);
@@ -60,7 +77,16 @@ class TeamsControllers extends Controller
         //return redirect()->route('dashboard.team.status.all');
         //tostr
         toastr()->success('Updated Memebr Status successfully');
-        return redirect()->route('dashboard.team.all');
+        return redirect()->route('dashboard.team.status.all');
+    }
+
+    public function deleteStatus($id){
+        $status = MemberStatus::find($id);
+
+        $status->delete();
+        
+        toastr()->success('Deleted Member Status Successfully');
+        return redirect()->route('dashboard.team.status.all');
     }
 
 

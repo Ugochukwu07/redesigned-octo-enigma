@@ -151,15 +151,9 @@
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <div class="input-group">
-                                      <div class="input-group-prepend">
-                                        <div class="input-group-text">
                                             <label>
                                           <input type="checkbox" name="admin" aria-label="Checkbox for following text input"> Admin
                                             </label>
-                                        </div>
-                                      </div>
-                                    </div>
                                 </div>
                                   <div class="text-center">
                                     <button type="submit" class="btn btn-success mt-4">{{ __('Add Member') }}</button>

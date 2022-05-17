@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('dashboard.index') }}">
-            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="{{ asset('assets/logo/5/full.png') }}" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="{{ route('dashboard.index') }}">
-                            <img src="{{ asset('argon') }}/img/brand/blue.png">
+                            <img src="{{ asset('assets/logo/5/full.png') }}">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -83,6 +83,13 @@
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
                 </li>
+            </ul>
+            
+            <!-- Divider -->
+            <hr class="my-3">
+            <!-- Heading -->
+            <h6 class="navbar-heading text-muted">Teams</h6>
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         {{-- <i class="fab fa-circle-08"></i> --}}
@@ -94,19 +101,44 @@
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('dashboard.team.all') }}">
-                                    {{ __('View') }}
+                                    {{ __('All') }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('dashboard.team.add') }}">
-                                    {{ __('New') }}
+                                    {{ __('Add') }}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
 
-                <li class="nav-item">
+                
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#member-status" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="member-status">
+                                    {{-- <i class="fab fa-circle-08"></i> --}}
+                                    <i class="fa fa-users" aria-hidden="true" style="color: #f4645f;"></i>
+                                    <span class="nav-link-text" style="color: #f4645f;">{{ __("Status") }}</span>
+                                </a>
+            
+                                <div class="collapse" id="member-status">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('dashboard.team.status.all') }}">
+                                                {{ __('All') }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('dashboard.team.status.add') }}">
+                                                {{ __('Add') }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                <hr class="my-3">
+
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ route('dashboard.icons') }}">
                         <i class="ni ni-planet text-blue"></i> {{ __('Icons') }}
                     </a>
@@ -153,7 +185,16 @@
                     <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/docs/components/alerts.html">
                         <i class="ni ni-ui-04"></i> Components
                     </a>
-                </li>
+                </li> --}}
+            </ul>
+            
+            <!-- Divider -->
+            <hr class="my-3">
+            <!-- Heading -->
+            <h6 class="navbar-heading text-muted">Contact Us</h6>
+            <ul class="navbar-nav">
+                <x-Sidebar.Contact.Tickets />
+                <x-Sidebar.Contact.Message />
             </ul>
         </div>
     </div>

@@ -2,6 +2,8 @@
 
 namespace App\View\Components\Dashboard;
 
+use stdClass;
+use App\Models\Members;
 use Illuminate\View\Component;
 
 class TeamOverview extends Component
@@ -14,6 +16,14 @@ class TeamOverview extends Component
     public function __construct()
     {
         //
+    }
+
+    public function team(){
+        $team = new stdClass;
+        $team->all = Members::where('admin', 0)->count();
+        $team->admin = Members::where('admin', 1)->count();
+
+        return $team;
     }
 
     /**
