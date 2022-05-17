@@ -35,7 +35,7 @@ class TicketController extends Controller
 
         if($validate->fails()){
             toastr()->error('Something went wrong');
-            dd($validate->errors());
+            //dd($validate->errors());
             $validate->validate();
             return back();
         }else{
