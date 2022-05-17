@@ -29,7 +29,7 @@ class TicketController extends Controller
                 'subject' => 'required',
                 'terms' => 'accepted',
                 'message' => 'required|min:50',
-                'g-recaptcha-response' => 'required|recaptchav3:askQuestion,0.7'
+                /* 'g-recaptcha-response' => 'required|recaptchav3:askQuestion,0.7' */
             ]
         );
 
