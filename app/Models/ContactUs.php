@@ -15,6 +15,7 @@ class ContactUs extends Model
 
     //define fillables
     protected $fillable = [
-        'full_name', 'email', 'department', 'message', 'phone', 'ticket_id'
+        'full_name', 'email', 'department', 'message', 'phone', 'ticket_id',
+        'archive', 'read'
     ];
 }

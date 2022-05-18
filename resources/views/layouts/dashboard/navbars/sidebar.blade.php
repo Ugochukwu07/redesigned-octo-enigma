@@ -84,17 +84,14 @@
                     </a>
                 </li>
             </ul>
-            
-            <!-- Divider -->
-            <hr class="my-3">
             <!-- Heading -->
             <h6 class="navbar-heading text-muted">Teams</h6>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                    <a class="nav-link{{ (request()->is('dashboard/team/all') || request()->is('dashboard/team/add')) ? ' active' : '' }}" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         {{-- <i class="fab fa-circle-08"></i> --}}
                         <i class="fa fa-users" aria-hidden="true" style="color: #f4645f;"></i>
-                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Our Teams') }}</span>
+                        <span class="nav-link-text" style="color: #332928;">{{ __('Our Teams') }}</span>
                     </a>
 
                     <div class="collapse" id="navbar-examples">
@@ -112,13 +109,11 @@
                         </ul>
                     </div>
                 </li>
-
-                
                             <li class="nav-item">
-                                <a class="nav-link active" href="#member-status" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="member-status">
+                                <a class="nav-link{{ (request()->is('dashboard/team/status/all') || request()->is('dashboard/team/status/add')) ? ' active' : '' }}" href="#member-status" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="member-status">
                                     {{-- <i class="fab fa-circle-08"></i> --}}
                                     <i class="fa fa-users" aria-hidden="true" style="color: #f4645f;"></i>
-                                    <span class="nav-link-text" style="color: #f4645f;">{{ __("Status") }}</span>
+                                    <span class="nav-link-text" style="color: #423939;">{{ __("Status") }}</span>
                                 </a>
             
                                 <div class="collapse" id="member-status">
@@ -130,13 +125,11 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ route('dashboard.team.status.add') }}">
-                                                {{ __('Add') }}
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                <hr class="my-3">
 
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ route('dashboard.icons') }}">
@@ -187,9 +180,6 @@
                     </a>
                 </li> --}}
             </ul>
-            
-            <!-- Divider -->
-            <hr class="my-3">
             <!-- Heading -->
             <h6 class="navbar-heading text-muted">Contact Us</h6>
             <ul class="navbar-nav">
@@ -199,3 +189,4 @@
         </div>
     </div>
 </nav>
+

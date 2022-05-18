@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Sidebar\Contact;
 
+use App\Models\ContactQuestion;
 use Illuminate\View\Component;
 
 class Tickets extends Component
@@ -14,6 +15,10 @@ class Tickets extends Component
     public function __construct()
     {
         //
+    }
+
+    public function question(){
+        return ContactQuestion::where('read', 0)->count();
     }
 
     /**

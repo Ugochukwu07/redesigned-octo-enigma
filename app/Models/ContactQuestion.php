@@ -15,6 +15,7 @@ class ContactQuestion extends Model
     protected $fillable = [
         'full_name', 'email',
         'number', 'subject',
-        'message', 'ticket_id'
+        'message', 'ticket_id',
+        'archive', 'read'
     ];
 }

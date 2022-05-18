@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Sidebar\Contact;
 
+use App\Models\ContactUs;
 use Illuminate\View\Component;
 
 class Message extends Component
@@ -14,6 +15,10 @@ class Message extends Component
     public function __construct()
     {
         //
+    }
+
+    public function message(){
+        return ContactUs::where('read', 0)->count();
     }
 
     /**
