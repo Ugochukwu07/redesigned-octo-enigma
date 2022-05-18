@@ -70,6 +70,9 @@ Route::prefix('dashboard')->name('dashboard.')->group(function(){
                 Route::get('/{ticket_id}/delete', 'deleteMessage')->name('delete');
                 Route::get('/archive/{ticket_id}/{table}', 'archiveMessage')->name('archive');
             });
+
+            //Reply Save
+            Route::post('/reply/save', 'replySave')->name('reply.save');
         });
     });
 });

@@ -16,7 +16,7 @@ class TicketControllers extends Controller
     }
 
     public function allTickets(){
-        $tickets = ContactQuestion::all();
+        $tickets = ContactQuestion::where('archive', 0)->orderBy('created_at', 'desc')->paginate(20);
 
         return view('dashboard.contact.index', [
             'title' => 'Question Tickets',
@@ -26,7 +26,7 @@ class TicketControllers extends Controller
     }
 
     public function allMessage(){
-        $tickets = ContactQuestion::all();
+        $tickets = ContactUs::where('archive', 0)->orderBy('created_at', 'desc')->paginate(20);
 
         return view('dashboard.contact.index', [
             'title' => 'Contact Us Tickets',

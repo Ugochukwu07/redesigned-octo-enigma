@@ -7,7 +7,6 @@
 
     <div class="container-fluid mt--7">
         <div class="row">
-            <div class="col-12 my-7"></div>
             <div class="col-xl-12 mx-auto order-xl-1">
                 <div class="card bg-secondary shadow">
                     <div class="card-header bg-white border-0">
@@ -73,6 +72,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        {{ $messages->links() }}
                     </div>
                 </div>
             </div>
