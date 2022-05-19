@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.app')
 
-@section('title') Reply {{ $message->subject }} @endsection
+@section('title') Reply {{ $message->subject ?? $message->department }} @endsection
 
 @section('content')
     <x-Dashboard.TicketHeader />
