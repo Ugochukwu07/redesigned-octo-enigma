@@ -46,8 +46,8 @@
                                         {{ $status->description }}
                                     </td>
                                     <td>
-                                        <a class="text-info mx-2" title="edit" href="{{ route('dashboard.team.status.edit', ['id' => $status->id]) }}"><i class="fa-solid fa-pen-to-square"></i>e</a>
-                                        <a class="text-danger mx-2" title="delete" href="{{ route('dashboard.team.status.delete', ['id' => $status->id]) }}"><i class="fa-solid fa-trash-can"></i>d</a>
+                                        <a class="text-info mx-2" title="edit" href="{{ route('dashboard.team.status.edit', ['id' => $status->id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a class="text-danger mx-2" title="delete" href="{{ route('dashboard.team.status.delete', ['id' => $status->id]) }}"><i class="fa-solid fa-trash-can"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

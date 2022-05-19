@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Http\Controllers\Controller;
-use App\Models\ContactQuestion;
 use App\Models\ContactUs;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\TicketReplys;
 use Illuminate\Http\Request;
+use App\Models\ContactQuestion;
+use App\Models\TicketReplysFiles;
+use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Validator;
 
 class TicketControllers extends Controller
 {
@@ -38,7 +41,10 @@ class TicketControllers extends Controller
     public function replyTickets($ticket_id){
         $ticket = ContactQuestion::where('ticket_id', $ticket_id)->first();
 
-        return;
+        return view('dashboard.contact.reply', [
+            'message' => $ticket,
+            'table' => 'ticket_question'
+        ]);
     }
 
     public function deleteTickets($ticket_id){
@@ -52,7 +58,10 @@ class TicketControllers extends Controller
     public function replyMessage($ticket_id){
         $ticket = ContactUs::where('ticket_id', $ticket_id)->first();
 
-        return;
+        return view('dashboard.contact.reply', [
+            'message' => $ticket,
+            'table' => 'contact_us'
+        ]);
     }
 
     public function deleteMessage($ticket_id){
@@ -77,5 +86,81 @@ class TicketControllers extends Controller
 
         toastr()->success('Message archived');
         return back();
+    }
+
+    public function replySave(Request $request){
+        $request->validate([
+            'reply' => 'required'
+        ]);
+
+        $saveReply = TicketReplys::create([
+            'reply' => $request->input('reply'),
+            'users_id' => auth()->user()->id,
+            'ticket_id' => $request->input('ticket_id'),
+            'table' => $request->input('table'),
+        ]);
+
+        if($request->input('fileCheck') == 'on'){
+            toastr()->success('Upload your files');
+            return redirect()->route('dashboard.contact.reply.file', ['ticket_id' => $request->input('ticket_id'), 'table' => $request->input('table')]);
+        }else{
+            //send mail
+        }
+    }
+
+    public function replyFile($ticket_id, $table){
+        return view('dashboard.contact.file', [
+            'ticket_id' => $ticket_id,
+            'table' => $table
+        ]);
+    }
+
+    public function replyFileSave(Request $request){
+        $data = array();
+
+        $validator = Validator::make($request->all(), [
+             'file' => 'required|mimes:png,jpg,jpeg,pdf,dot,docm,docx,dotx,gif,csv,xlsx,xlsm,xlsb,xltx,svg|max:15360',
+             'ticket_id' => 'required|regex:/(^(HTECH-)([0-9]{5}))/'
+        ]);
+
+        if ($validator->fails()) {
+
+            $data['success'] = 0;
+            $data['message'] = $validator->errors()->all();// Error response
+
+        }else{
+             if($request->file('file')) {
+
+                $file = $request->file('file');
+                $filename = $file->hashName();
+
+                  // File upload location
+                  $location = 'storage/contacts/files';
+
+                  // Upload file
+                  $file->move($location,$filename);
+
+                  TicketReplysFiles::create([
+                    'location' => $location.'/'.$filename,
+                    'filename' => $file->getClientOriginalName(),
+                    'users_id' => auth()->user()->id,
+                    'ticket_id' => $request->ticket_id,
+                    'table' => $request->table
+                  ]);
+
+                toastr()->success('You uploaded a .' . $file->getClientOriginalExtension() . ' file');
+                
+                  // Response
+                  $data['success'] = 1;
+                  $data['message'] = 'Your file was uploaded successfully!';
+
+             }else{
+                   // Response
+                   $data['success'] = 0;
+                   $data['message'] = 'Your file not uploaded.'; 
+             }
+        }
+
+        return response()->json($data);
     }
 }

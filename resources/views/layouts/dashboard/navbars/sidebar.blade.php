@@ -90,8 +90,8 @@
                 <li class="nav-item">
                     <a class="nav-link{{ (request()->is('dashboard/team/all') || request()->is('dashboard/team/add')) ? ' active' : '' }}" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         {{-- <i class="fab fa-circle-08"></i> --}}
-                        <i class="fa fa-users" aria-hidden="true" style="color: #f4645f;"></i>
-                        <span class="nav-link-text" style="color: #332928;">{{ __('Our Teams') }}</span>
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span class="nav-link-text">{{ __('Our Teams') }}</span>
                     </a>
 
                     <div class="collapse" id="navbar-examples">
@@ -112,8 +112,8 @@
                             <li class="nav-item">
                                 <a class="nav-link{{ (request()->is('dashboard/team/status/all') || request()->is('dashboard/team/status/add')) ? ' active' : '' }}" href="#member-status" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="member-status">
                                     {{-- <i class="fab fa-circle-08"></i> --}}
-                                    <i class="fa fa-users" aria-hidden="true" style="color: #f4645f;"></i>
-                                    <span class="nav-link-text" style="color: #423939;">{{ __("Status") }}</span>
+                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                    <span class="nav-link-text">{{ __("Status") }}</span>
                                 </a>
             
                                 <div class="collapse" id="member-status">
@@ -124,8 +124,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('dashboard.team.status.add') }}">
-                                            </a>
+                                            <a class="nav-link" href="{{ route('dashboard.team.status.add') }}">Add</a>
                                         </li>
                                     </ul>
                                 </div>
