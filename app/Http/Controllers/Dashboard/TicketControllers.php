@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Mail\TicketReply;
 use App\Models\ContactUs;
 use App\Models\TicketReplys;
 use Illuminate\Http\Request;
 use App\Models\ContactQuestion;
 use App\Models\TicketReplysFiles;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
 
@@ -105,6 +107,7 @@ class TicketControllers extends Controller
             return redirect()->route('dashboard.contact.reply.file', ['ticket_id' => $request->input('ticket_id'), 'table' => $request->input('table')]);
         }else{
             //send mail
+            Mail::to($request->email, $request->name)->send(new TicketReply($request));
         }
     }
 
@@ -162,5 +165,22 @@ class TicketControllers extends Controller
         }
 
         return response()->json($data);
+    }
+
+    public function replySend($id){
+        $reply = TicketReplys::where('id', $id)->first();
+        if($reply->table == 'contact_us'){
+            $ticket = ContactUs::where('ticket_id', $reply->ticket_id)->first();
+            $reply->name = $ticket->full_name;
+            $reply->subject = $ticket->department;
+        }else{
+            $ticket = ContactQuestion::where('ticket_id', $reply->ticket_id)->first();
+            $reply->name = $ticket->name;
+            $reply->subject = $ticket->subject;
+        }
+        //send mail
+        Mail::to($ticket->email, $reply->name)->send(new TicketReply($reply));
+
+        return redirect()->route('dashboard.contact.message.index');
     }
 }

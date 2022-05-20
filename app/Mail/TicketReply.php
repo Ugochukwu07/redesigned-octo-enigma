@@ -19,7 +19,7 @@ class TicketReply extends Mailable
      */
     public function __construct($replyData)
     {
-        $this->replyData = $replyData;
+        $this->message = $replyData;
     }
 
     /**
@@ -29,6 +29,13 @@ class TicketReply extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mails.contact.reply');
+        return $this->markdown('mails.contact.reply')->subject($this->message->subject);
+        //check for attachments
+        if(count($this->message->files) > 0){
+            foreach ($this->message->files as $file) {
+                $this->attach($file->location, ['as' => $file->filename]);
+            }
+        }
+        return $this;
     }
 }

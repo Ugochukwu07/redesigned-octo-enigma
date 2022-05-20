@@ -23,4 +23,8 @@ class TicketReplys extends Model
     public function client($model){
         return $this->hasOne($model, 'ticket_id', 'ticket_id');
     }
+
+    public function files(){
+        return $this->hasMany(TicketReplysFiles::class, 'ticket_id', 'ticket_id');
+    }
 }

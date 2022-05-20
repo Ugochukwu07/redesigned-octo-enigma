@@ -20,8 +20,8 @@ use App\Http\Controllers\ContactUsController;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/mail', function () {
+    return view('mails.contact.reply');
 });
 
 Route::controller(PagesControllers::class)->group(function(){
