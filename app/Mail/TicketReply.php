@@ -11,7 +11,7 @@ class TicketReply extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $replyData;
+    public $message;
     /**
      * Create a new message instance.
      *

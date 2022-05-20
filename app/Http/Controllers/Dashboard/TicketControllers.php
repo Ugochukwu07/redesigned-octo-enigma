@@ -78,11 +78,11 @@ class TicketControllers extends Controller
     {
         switch ($table) {
             case 1:
-                $this->archive(new ContactQuestion(), ['ticket_id', $ticket_id]);
+                $this->archive(new ContactQuestion(), ['ticket_id' => $ticket_id]);
                 break;
             
             default:
-                $this->archive(new ContactUs(), ['ticket_id', $ticket_id]);
+                $this->archive(new ContactUs(), ['ticket_id' => $ticket_id]);
                 break;
         }
 
@@ -167,8 +167,8 @@ class TicketControllers extends Controller
         return response()->json($data);
     }
 
-    public function replySend($id){
-        $reply = TicketReplys::where('id', $id)->first();
+    public function replySend($ticket_id){
+        $reply = TicketReplys::where('ticket_id', $ticket_id)->first();
         if($reply->table == 'contact_us'){
             $ticket = ContactUs::where('ticket_id', $reply->ticket_id)->first();
             $reply->name = $ticket->full_name;

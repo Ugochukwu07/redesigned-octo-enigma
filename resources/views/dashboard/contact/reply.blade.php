@@ -64,7 +64,6 @@
                                 </div>
                             </div>
                         </form>
-                        <a href="{{ route('dashboard.contact.message.reply.send', ['ticket_id' => $message->ticket_id, 'table' => $table]) }}" class="btn btn-success">Send Mail</a>
                     </div>
                 </div>
             </div>

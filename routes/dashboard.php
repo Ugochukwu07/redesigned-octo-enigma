@@ -75,7 +75,7 @@ Route::prefix('dashboard')->name('dashboard.')->group(function(){
             Route::post('/reply/save', 'replySave')->name('reply.save');
             Route::get('/reply/file/{ticket_id}/{table}', 'replyFile')->name('reply.file');
             Route::post('/reply/file/save', 'replyFileSave')->name('reply.file.save');
-            Route::post('/reply/{id}/send', 'replySend')->name('reply.send');
+            Route::get('/reply/{ticket_id}/send', 'replySend')->name('reply.send');
         });
     });
 });

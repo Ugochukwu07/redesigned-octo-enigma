@@ -35,6 +35,7 @@
                                 <h4>Drop files here to upload</h4>
                             </div>
                         </form>
+                        <a href="{{ route('dashboard.contact.reply.send', ['ticket_id' => $ticket_id]) }}" class="btn btn-success">Send Mail</a>
                     </div>
                 </div>
             </div>
