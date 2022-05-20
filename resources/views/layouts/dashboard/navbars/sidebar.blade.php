@@ -184,6 +184,16 @@
             <ul class="navbar-nav">
                 <x-Sidebar.Contact.Tickets />
                 <x-Sidebar.Contact.Message />
+               {{--  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('dashboard.contact.allArchives') }}">
+                        <i class="fa-solid fa-message"></i> Archives
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('dashboard.contact.allRead') }}">
+                        <i class="fa-solid fa-message"></i> Read
+                    </a>
+                </li> --}}
             </ul>
         </div>
     </div>

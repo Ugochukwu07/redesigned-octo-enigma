@@ -29,9 +29,9 @@ class TicketReply extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mails.contact.reply')->subject($this->message->subject);
+        $this->markdown('mails.contact.reply')->subject($this->message->subject);
         //check for attachments
-        if(empty($this->message->files)){
+        if(count($this->message->files) > 0){
             foreach ($this->message->files as $file) {
                 $this->attach($file->location, ['as' => $file->filename]);
             }

@@ -8,6 +8,7 @@ use App\Models\TicketReplys;
 use Illuminate\Http\Request;
 use App\Models\ContactQuestion;
 use App\Models\TicketReplysFiles;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Database\Eloquent\Model;
@@ -21,7 +22,7 @@ class TicketControllers extends Controller
     }
 
     public function allTickets(){
-        $tickets = ContactQuestion::where('archive', 0)->orderBy('created_at', 'desc')->paginate(20);
+        $tickets = ContactQuestion::where('archive', 0)->where('read', 0)->orderBy('created_at', 'desc')->paginate(20);
 
         return view('dashboard.contact.index', [
             'title' => 'Question Tickets',
@@ -31,7 +32,7 @@ class TicketControllers extends Controller
     }
 
     public function allMessage(){
-        $tickets = ContactUs::where('archive', 0)->orderBy('created_at', 'desc')->paginate(20);
+        $tickets = ContactUs::where('archive', 0)->where('read', 0)->orderBy('created_at', 'desc')->paginate(20);
 
         return view('dashboard.contact.index', [
             'title' => 'Contact Us Tickets',
@@ -78,11 +79,11 @@ class TicketControllers extends Controller
     {
         switch ($table) {
             case 1:
-                $this->archive(new ContactQuestion(), ['ticket_id' => $ticket_id]);
+                $this->archive(new ContactQuestion(), $ticket_id);
                 break;
             
             default:
-                $this->archive(new ContactUs(), ['ticket_id' => $ticket_id]);
+                $this->archive(new ContactUs(), $ticket_id);
                 break;
         }
 
@@ -90,17 +91,45 @@ class TicketControllers extends Controller
         return back();
     }
 
+    public function replyView($ticket_id, $table){
+        switch ($table) {
+            case 0:
+                $message = ContactQuestion::where('ticket_id', $ticket_id)->first();
+                $message->type = true;
+                break;
+            
+            default:
+                $message = ContactUs::where('ticket_id', $ticket_id)->first();
+                $message->type = false;
+                break;
+        }
+
+        return view('dashboard.contact.view', [
+            'message' => $message
+        ]);
+    }
+
     public function replySave(Request $request){
         $request->validate([
             'reply' => 'required'
         ]);
+        //check if reply is done before
+        $oldReply = TicketReplys::where('ticket_id', $request->ticket_id)->first();
+        if($oldReply){
+            TicketReplys::where('ticket_id', $request->ticket_id)->update([
+                'reply' => $request->input('reply'),
+                'users_id' => auth()->user()->id,
+            ]);
+        }else{
+            $saveReply = TicketReplys::create([
+                'reply' => $request->input('reply'),
+                'users_id' => auth()->user()->id,
+                'ticket_id' => $request->input('ticket_id'),
+                'table' => $request->input('table'),
+            ]);
+        }
 
-        $saveReply = TicketReplys::create([
-            'reply' => $request->input('reply'),
-            'users_id' => auth()->user()->id,
-            'ticket_id' => $request->input('ticket_id'),
-            'table' => $request->input('table'),
-        ]);
+        ($request->table == 'contact_us') ? $this->markAsRead(new ContactUs(), $request->ticket_id) : $this->markAsRead(new ContactQuestion(), $request->ticket_id);
 
         if($request->input('fileCheck') == 'on'){
             toastr()->success('Upload your files');
@@ -181,6 +210,24 @@ class TicketControllers extends Controller
         //send mail
         Mail::to($ticket->email, $reply->name)->send(new TicketReply($reply));
 
+        toastr()->success('Mail Sent');
         return redirect()->route('dashboard.contact.message.index');
+    }
+
+
+    public function allArchives(){
+        $tickets = DB::table('contact_us')->where('archives', 1)
+                    ->join('ticket_question', 'archive', '=', 1)
+                    ->get();
+        
+                    return view('dashboard.contact.index', [
+                        'messages' => $tickets
+                    ]);
+    }
+
+
+    //LazyLists
+    public function listView($ticket_id){
+        
     }
 }

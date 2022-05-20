@@ -76,6 +76,18 @@ Route::prefix('dashboard')->name('dashboard.')->group(function(){
             Route::get('/reply/file/{ticket_id}/{table}', 'replyFile')->name('reply.file');
             Route::post('/reply/file/save', 'replyFileSave')->name('reply.file.save');
             Route::get('/reply/{ticket_id}/send', 'replySend')->name('reply.send');
+
+            Route::get('/reply/{ticket_id}/view/{table}', 'replyView')->name('view');
+            /* Route::get('/contact/archives', 'allArchives')->name('archives.all');
+            Route::get('/contact/read', 'allRead')->name('read.all');
+
+            //lazylist
+            Route::prefix('list/')->name('list.')->group(function(){
+                Route::get('view/{ticket_id}', 'listView')->name('view');
+                Route::get('unarchive/{ticket_id}', 'listUnarchive')->name('unarchive');
+                Route::get('delete/{ticket_id}', 'listDelete')->name('delete');
+                Route::get('reply/{ticket_id}', 'listReply')->name('reply');
+            }); */
         });
     });
 });

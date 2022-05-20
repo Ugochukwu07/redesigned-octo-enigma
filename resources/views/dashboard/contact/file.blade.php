@@ -19,7 +19,7 @@
                             <h3 class="mb-0">{{ __('Reply Ticket') }}</h3>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <form action="{{ route('dashboard.contact.reply.file.save') }}" class="dropzone">
                             @csrf
                             <input type="hidden" name="ticket_id" value="{{ $ticket_id }}">

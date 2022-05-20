@@ -52,20 +52,13 @@
                                                 {{ $message->number ?? $message->phone }}
                                             </td>
                                             <td>
-                                                {{ substr($message->message, 0, 50) }}...
+                                                {{ $message->message }}
                                             </td>
                                             <td>
-                                                @if ($type)
-                                                <a class="text-success mx-2" data-toggle="tooltip" data-placement="top" title="View" href="{{ route('dashboard.contact.view', ['ticket_id' => $message->ticket_id, 'table' => 0]) }}"><i class="fa-solid fa-eye"></i></a>
-                                                        <a class="text-info mx-2" title="Reply" data-toggle="tooltip" data-placement="top" href="{{ route('dashboard.contact.tickets.reply', ['ticket_id' => $message->ticket_id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                        <a class="text-danger mx-2" data-toggle="tooltip" data-placement="top" title="delete" href="{{ route('dashboard.contact.tickets.delete', ['ticket_id' => $message->ticket_id]) }}"><i class="fa-solid fa-trash-can"></i></a>
-                                                        <a class="text-warning mx-2" data-toggle="tooltip" data-placement="top" title="archive" href="{{ route('dashboard.contact.tickets.archive', ['ticket_id' => $message->ticket_id, 'table' => 0]) }}"><i class="fa-solid fa-box-archive"></i></a>
-                                                @else
-                                                <a class="text-success mx-2" data-toggle="tooltip" data-placement="top" title="View" href="{{ route('dashboard.contact.view', ['ticket_id' => $message->ticket_id, 'table' => 1]) }}"><i class="fa-solid fa-eye"></i></a>
-                                                        <a class="text-info mx-2" data-toggle="tooltip" data-placement="top" title="Reply" href="{{ route('dashboard.contact.message.reply', ['ticket_id' => $message->ticket_id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                        <a class="text-danger mx-2" data-toggle="tooltip" data-placement="top" title="delete" href="{{ route('dashboard.contact.message.delete', ['ticket_id' => $message->ticket_id]) }}"><i class="fa-solid fa-trash-can"></i></a>
-                                                        <a class="text-warning mx-2" data-toggle="tooltip" data-placement="top" title="archive" href="{{ route('dashboard.contact.message.archive', ['ticket_id' => $message->ticket_id, 'table' => 1]) }}"><i class="fa-solid fa-box-archive"></i></a>
-                                                @endif
+                                                <a class="text-success mx-2" data-toggle="tooltip" data-placement="top" title="View" href="{{ route('list.view', ['ticket_id' => $message->ticket_id]) }}"><i class="fa-solid fa-eye"></i></a>
+                                                        <a class="text-info mx-2" title="Reply" data-toggle="tooltip" data-placement="top" href="{{ route('list.reply', ['ticket_id' => $message->ticket_id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                                        <a class="text-danger mx-2" data-toggle="tooltip" data-placement="top" title="delete" href="{{ route('list.delete', ['ticket_id' => $message->ticket_id]) }}"><i class="fa-solid fa-trash-can"></i></a>
+                                                        <a class="text-warning mx-2" data-toggle="tooltip" data-placement="top" title="archive" href="{{ route('list.unarchive', ['ticket_id' => $message->ticket_id, 'table' => 0]) }}"><i class="fa-solid fa-box-archive"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach
