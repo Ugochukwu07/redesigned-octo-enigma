@@ -1,11 +1,13 @@
 @extends('layouts.dashboard.app')
 
-@section('title') All Team Member @endsection
+@section('title')
+    Portfolios
+@endsection
 
 @section('content')
-    <x-Dashboard.TeamOverview />
-
-    
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+    </div>
+        
     <div class="container-fluid mt--7">
         <div class="row">
             
@@ -13,7 +15,11 @@
                 <div class="card bg-secondary shadow">
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
-                            <h3 class="mb-0">{{ __('All Team Members') }}</h3>
+                            <div class="col-md-6">
+                            <h3 class="mb-0">{{ __('All Our Portfoilos') }}</h3></div>
+                            <div class="col-md-6 text-center text-md-right">
+                                @include('layouts.dashboard.modals.portfoilos.add')
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
@@ -25,8 +31,9 @@
                                     <th scope="col">S/N</th>
                                     <th scope="col">Image</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Stack</th>
+                                    <th scope="col">Department</th>
+                                    <th scope="col">Tags</th>
+                                    <th scope="col">Description</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>

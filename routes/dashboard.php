@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthControllers;
+use App\Http\Controllers\Dashboard\DepartmentController;
 use App\Http\Controllers\Dashboard\TeamsControllers;
 use App\Http\Controllers\Dashboard\TicketControllers;
 
@@ -88,6 +89,30 @@ Route::prefix('dashboard')->name('dashboard.')->group(function(){
                 Route::get('delete/{ticket_id}', 'listDelete')->name('delete');
                 Route::get('reply/{ticket_id}', 'listReply')->name('reply');
             }); */
+        });
+
+        //Department
+        Route::controller(DepartmentController::class)->prefix('department')->name('department.')->group(function(){
+            Route::get('/all', 'all')->name('all');
+
+            Route::post('/add/save', 'addSave')->name('add.save');
+            
+            Route::get('/{department_id}/edit', 'edit')->name('edit');
+            Route::post('/edit/save', 'editSave')->name('edit.save');
+
+            Route::get('/{department_id}/delete', 'delete')->name('delete');
+        });
+
+        //Portfoilo
+        Route::controller(PortfoiloController::class)->prefix('portfoilo')->name('portfoilo.')->group(function(){
+            Route::get('/all', 'all')->name('all');
+
+            Route::post('/add/save', 'addSave')->name('add.save');
+            
+            Route::get('/{portfoilo_id}/edit', 'edit')->name('edit');
+            Route::post('/edit/save', 'editSave')->name('edit.save');
+
+            Route::get('/{portfoilo_id}/delete', 'delete')->name('delete');
         });
     });
 });

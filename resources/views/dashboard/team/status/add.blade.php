@@ -35,11 +35,9 @@
                                     <label class="form-control-label" for="department">{{ __('Member department') }}</label>
                                     <select class="form-control form-control-alternative{{ $errors->has('department') ? ' is-invalid' : '' }}" name="department" id="department">
                                         <option></option>
-                                        <option value="1">Logo and Branding</option>
-                                        <option value="2">Web Developemnt</option>
-                                        <option value="3">Mobile Apps</option>
-                                        <option value="4">UI/UX</option>
-                                        <option value="5">Technical Support</option>
+                                        @foreach ($departments as $department)
+                                            <option @if($department->name == old('department')) selected @endif value="{{ $department->name }}">{{ $department->name }}</option>	
+                                        @endforeach
                                     </select>
                                     @if ($errors->has('department'))
                                         <span class="invalid-feedback" role="alert">

@@ -195,6 +195,15 @@
                     </a>
                 </li> --}}
             </ul>
+
+            <h6 class="navbar-heading text-muted">Departments</h6>
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                    <a class="nav-link" href="{{ route('dashboard.department.all') }}">
+                        <i class="fa-solid fa-message"></i> All
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

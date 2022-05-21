@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Members;
+use App\Models\Department;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PagesControllers extends Controller
 {
@@ -34,7 +35,11 @@ class PagesControllers extends Controller
     }
 
     public function contact($purpose){
-        return view('contact', ['purpose' => $purpose]);
+        $departments = Department::all();
+        return view('contact', [
+            'purpose' => $purpose,
+            'departments' => $departments
+        ]);
     }
 
     public function services(){

@@ -71,10 +71,9 @@
 									<div class="form-group col-sm-6">
 										<select name="department" id="department">
 											<option>Select Requirement</option>
-											<option @if($purpose == 'web') selected @endif value="web">Web Development</option>
-											<option @if($purpose == 'mobile') selected @endif value="mobile">Mobile App Development</option>
-											<option @if($purpose == 'branding') selected @endif value="branding">Logo and Branding</option>
-											<option value="support">Techinical Support</option>
+											@foreach ($departments as $department)
+												<option @if($department->name == old('name')) selected @endif value="{{ $department->name }}">{{ $department->name }}</option>	
+											@endforeach
 										</select>
 										@error('department')
 											<span class="badge bg-danger">{{ $message }}</span>

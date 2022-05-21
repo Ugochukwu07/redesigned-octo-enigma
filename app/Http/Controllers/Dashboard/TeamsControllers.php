@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use stdClass;
 use App\Models\Members;
+use App\Models\Department;
 use App\Models\MemberStatus;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -27,14 +28,18 @@ class TeamsControllers extends Controller
     }
 
     public function addStatus(){
-        return view('dashboard.team.status.add');
+        $departments = Department::all();
+
+        return view('dashboard.team.status.add', [
+            'departments' => $departments
+        ]);
     }
 
     public function addStatusSave(Request $request){
         $request->validate([
             'name' => 'required|unique:member_status,name',
             'description' => 'required',
-            'department' => 'required|numeric'
+            'department' => 'required'
         ]);
 
         //save to database
@@ -54,8 +59,11 @@ class TeamsControllers extends Controller
 
     public function editStatus($id){
         $status = MemberStatus::find($id);
+        $departments = Department::all();
+
         return view('dashboard.team.status.edit', [
-            'status' => $status
+            'status' => $status,
+            'departments' => $departments
         ]);
     }
 
@@ -63,7 +71,7 @@ class TeamsControllers extends Controller
         $request->validate([
             'name' => 'required|unique:member_status,name,' . $request->input('status_id'),
             'description' => 'required',
-            'department' => 'required|numeric'
+            'department' => 'required'
         ]);
 
         //save to database
