@@ -6,6 +6,7 @@ use App\Models\Members;
 use App\Models\Department;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Portfolio;
 
 class PagesControllers extends Controller
 {
@@ -15,7 +16,12 @@ class PagesControllers extends Controller
     }
 
     public function portfolio(){
-        return view('portfolio');
+        $portfolios = Portfolio::orderBy('created_at', 'desc')->paginate(40);
+        $departments = Department::all();
+        return view('portfolio', [
+            'portfolios' => $portfolios,
+            'departments' => $departments
+        ]);
     }
 
     public function team(){
@@ -47,15 +53,26 @@ class PagesControllers extends Controller
     }
 
     public function branding(){
-        return view('services.graphics');
+        $portfolios = Portfolio::where('department_id', 4)->orderBy('created_at', 'desc')->paginate(40);
+        return view('services.graphics', [
+            'portfolios' => $portfolios
+        ]);
     }
 
     public function mobile(){
-        return view('services.mobile');
+        $portfolios = Portfolio::where('department_id', 5)->orderBy('created_at', 'desc')->paginate(40);
+
+        return view('services.mobile', [
+            'portfolios' => $portfolios
+        ]);
     }
 
     public function web(){
-        return view('services.web');
+        $portfolios = Portfolio::where('department_id', 6)->orderBy('created_at', 'desc')->paginate(40);
+
+        return view('services.web', [
+            'portfolios' => $portfolios
+        ]);
     }
 
     public function digital(){

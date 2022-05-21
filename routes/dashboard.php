@@ -5,9 +5,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthControllers;
-use App\Http\Controllers\Dashboard\DepartmentController;
 use App\Http\Controllers\Dashboard\TeamsControllers;
 use App\Http\Controllers\Dashboard\TicketControllers;
+use App\Http\Controllers\Dashboard\PortfoiloController;
+use App\Http\Controllers\Dashboard\DepartmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -104,15 +105,15 @@ Route::prefix('dashboard')->name('dashboard.')->group(function(){
         });
 
         //Portfoilo
-        Route::controller(PortfoiloController::class)->prefix('portfoilo')->name('portfoilo.')->group(function(){
+        Route::controller(PortfoiloController::class)->prefix('portfolio')->name('portfolio.')->group(function(){
             Route::get('/all', 'all')->name('all');
 
             Route::post('/add/save', 'addSave')->name('add.save');
             
-            Route::get('/{portfoilo_id}/edit', 'edit')->name('edit');
+            Route::get('/{portfolio_id}/edit', 'edit')->name('edit');
             Route::post('/edit/save', 'editSave')->name('edit.save');
 
-            Route::get('/{portfoilo_id}/delete', 'delete')->name('delete');
+            Route::get('/{portfolio_id}/delete', 'delete')->name('delete');
         });
     });
 });

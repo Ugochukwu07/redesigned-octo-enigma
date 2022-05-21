@@ -21,4 +21,8 @@ class Portfolio extends Model
     public function user(){
         return $this->hasOne(Users::class, 'id', 'users_id');
     }
+
+    public function department(){
+        return $this->hasOne(Department::class, 'id', 'department_id');
+    }
 }
