@@ -12,7 +12,7 @@ class Department extends Model
     protected $table = 'departments';
 
     protected $fillable = [
-        'name', 'users_id', 'description'
+        'name', 'users_id', 'description', 'status'
     ];
 
     public function user(){

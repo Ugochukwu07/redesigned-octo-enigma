@@ -52,7 +52,7 @@
                 @foreach ($portfolios as $portfolio)
                     <div class="col-lg-4 col-sm-4 mt40 single-card-item {{ $portfolio->department->id }}">
                         <div class="isotope_item up-hor">
-                            <div class="item-image">
+                            <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
                                 <a href="#"><img src="{{ url($portfolio->file) }}" alt="{{ $portfolio->name }}" class="img-fluid" /> </a>
                             </div>
                             <div class="item-info-div shdo">
@@ -62,6 +62,9 @@
                         </div>
                     </div>
                 @endforeach
+                <div class="col-lg-12 col-md-12">
+                    {{ $portfolios->links() }}
+                </div>
             </div>
         </div>
     </section>

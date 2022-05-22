@@ -35,6 +35,12 @@
                                     <span class="text-danger bg-danger">{{ $message }}</span>
                                 @enderror
                             </div>
+                            
+                            <div class="form-group mb-3">
+                                <label>
+                                    <input type="checkbox" @if($department->status) checked @endif name="status" aria-label="Checkbox for following text input"> Status
+                                </label>
+                            </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">Update Department</button>
                             </div>

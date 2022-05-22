@@ -1,7 +1,7 @@
 
 
 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-form">Add Portfoilo</button>
-<div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+<div class="modal fade text-left" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
     <div class="modal-dialog modal- modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
            <div class="modal-body p-0">

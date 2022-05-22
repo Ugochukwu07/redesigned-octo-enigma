@@ -31,6 +31,7 @@
                                     <th scope="col">S/N</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Description</th>
+                                    <th scope="col">Status</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
@@ -45,6 +46,9 @@
                                     </td>
                                     <td>
                                         {!! $department->description !!}
+                                    </td>
+                                    <td>
+                                        @if($department->status) <i class="fa-solid fa-circle text-success"></i> @else <i class="fa-solid fa-circle text-danger"></i> @endif
                                     </td>
                                     <td>
                                         <a class="text-info mx-2" title="edit" href="{{ route('dashboard.department.edit', ['department_id' => $department->id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>

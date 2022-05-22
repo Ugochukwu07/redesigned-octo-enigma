@@ -69,6 +69,7 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
+                            
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">Add Portfolio</button>
                             </div>

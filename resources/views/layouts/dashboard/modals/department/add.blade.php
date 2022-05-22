@@ -1,7 +1,7 @@
 
 
 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-form">Add Department</button>
-    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+    <div class="modal fade text-left" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
         <div class="modal-dialog modal- modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
                <div class="modal-body p-0">
@@ -24,6 +24,11 @@
                                     @error('description')
                                         <span class="text-danger bg-danger">{{ $message }}</span>
                                     @enderror
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>
+                                        <input type="checkbox" @if(old('status') == 'on') checked @endif name="status" aria-label="Checkbox for following text input"> Status
+                                    </label>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary my-4">Add Department</button>

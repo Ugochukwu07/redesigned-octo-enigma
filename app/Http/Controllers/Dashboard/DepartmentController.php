@@ -25,7 +25,8 @@ class DepartmentController extends Controller
         Department::create([
             'name' => $request->name,
             'description' => $request->description,
-            'users_id' => auth()->user()->id
+            'users_id' => auth()->user()->id,
+            'status' => ($request->status == 'on') ? 1 : 0
         ]);
 
         toastr()->success('Department Added');
@@ -49,7 +50,8 @@ class DepartmentController extends Controller
         Department::where('id', $request->department_id)->update([
             'name' => $request->name,
             'description' => $request->description,
-            'users_id' => auth()->user()->id
+            'users_id' => auth()->user()->id,
+            'status' => ($request->status == 'on') ? 1 : 0
         ]);
 
         toastr()->success('Department Updated');

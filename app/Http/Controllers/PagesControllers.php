@@ -17,7 +17,7 @@ class PagesControllers extends Controller
 
     public function portfolio(){
         $portfolios = Portfolio::orderBy('created_at', 'desc')->paginate(40);
-        $departments = Department::all();
+        $departments = Department::where('status', 1)->get();
         return view('portfolio', [
             'portfolios' => $portfolios,
             'departments' => $departments
@@ -53,14 +53,14 @@ class PagesControllers extends Controller
     }
 
     public function branding(){
-        $portfolios = Portfolio::where('department_id', 4)->orderBy('created_at', 'desc')->paginate(40);
+        $portfolios = Portfolio::where('department_id', 1)->orderBy('created_at', 'desc')->paginate(10);
         return view('services.graphics', [
             'portfolios' => $portfolios
         ]);
     }
 
     public function mobile(){
-        $portfolios = Portfolio::where('department_id', 5)->orderBy('created_at', 'desc')->paginate(40);
+        $portfolios = Portfolio::where('department_id', 4)->orderBy('created_at', 'desc')->paginate(10);
 
         return view('services.mobile', [
             'portfolios' => $portfolios
@@ -68,7 +68,7 @@ class PagesControllers extends Controller
     }
 
     public function web(){
-        $portfolios = Portfolio::where('department_id', 6)->orderBy('created_at', 'desc')->paginate(40);
+        $portfolios = Portfolio::where('department_id', 2)->orderBy('created_at', 'desc')->paginate(10);
 
         return view('services.web', [
             'portfolios' => $portfolios

@@ -266,72 +266,7 @@
         </div>
     </section>
     <!--End Pricing--> --}}
-    <!--Stat Projects-->
-    <section class="featured-project pad-tb">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="common-heading ptag">
-                        <span>Our Projects</span>
-                        <h2>Some of Our Works</h2>
-                        <p class="mb0">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-sm-6 mt60 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="isotope_item hover-scale">
-                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
-                            <a href="https://swiftresearchers.com/"><img src="{{ asset('assets/open/') }}/images/me/swfit.png" alt="image" class="img-fluid" /> </a>
-                        </div>
-                        <div class="item-info">
-                            <h4><a href="https://swiftresearchers.com/">Research Agency</a></h4>
-                            <p>Web Application</p>
-                        </div>
-                    </div>
-                </div>
-                {{-- <div class="col-lg-4 col-sm-4 mt60 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="isotope_item hover-scale">
-                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
-                            <a href="https://syticks.com/#"><img style="height: 500px" src="{{ asset('assets/open/') }}/images/me/syticks.png" alt="image" class="img-fluid" /> </a>
-                        </div>
-                        <div class="item-info">
-                            <h4><a href="https://syticks.com/#">Ticket App</a></h4>
-                            <p>iOs, Android</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-6 mt60 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="isotope_item hover-scale">
-                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
-                            <a href="{{ route('portfolio') }}"><img src="{{ asset('assets/open/') }}/images/me/esther.png" alt="image" class="img-fluid" /> </a>
-                        </div>
-                        <div class="item-info">
-                            <h4><a href="{{ route('portfolio') }}">Esthingo Chops</a></h4>
-                            <p>Graphic, Print</p>
-                        </div>
-                    </div>
-                </div> --}}
-                <div class="col-lg-6 col-sm-6 mt60 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="isotope_item hover-scale">
-                        <div class="item-image" data-tilt data-tilt-max="2" data-tilt-speed="1000">
-                            <a href="https://mazzydap.com/"><img src="{{ asset('assets/open/') }}/images/me/mazzy.png" alt="Mazzy Dap" class="img-fluid" /> </a>
-                        </div>
-                        <div class="item-info">
-                            <h4><a href="https://mazzydap.com/">Mazzy Digital Art and Prints</a></h4>
-                            <p>Web, Digital Marketing</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 maga-btn mt60">
-                    <a href="{{ route('portfolio') }}" class="btn-outline">View More Projects <i class="fas fa-chevron-right fa-icon"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Projects-->
+      @include('layouts.widgets.portfolios')
     
     <x-ClientReviews />
 
