@@ -28,7 +28,7 @@ class TicketController extends Controller
                 'number' => 'required',
                 'subject' => 'required',
                 'terms' => 'accepted',
-                'message' => 'required|min:50',
+                'message' => 'required|min:10',
                 /* 'g-recaptcha-response' => 'required|recaptchav3:askQuestion,0.7' */
             ]
         );
@@ -82,7 +82,7 @@ class TicketController extends Controller
                 'email' => 'email|required',
                 'phone' => 'required',
                 'department' => 'required',
-                'message' => 'required|min:50'
+                'message' => 'required|min:10'
                 /*
                 * i am unable to implimemt it the secound time
                 * 'g-recaptcha-response' => 'required|recaptchav3:contactUs,0.5'
