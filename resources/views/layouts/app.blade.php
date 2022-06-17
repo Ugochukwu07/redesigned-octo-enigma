@@ -16,7 +16,8 @@
     <!--plugin-css-->
     <link href="{{ asset('assets/open/') }}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('assets/open/') }}/css/plugin.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- template-style-->
 	<link href="{{ asset('assets/open/') }}/css/style.css" rel="stylesheet">
