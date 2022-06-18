@@ -45,34 +45,34 @@
                 <h4>Get In Touch</h4>
                 <p class="mt10">Please fill out the form below if you have a plan or project in mind that you'd like to share with us.</p>
                 <div class="media mt15">
-                  <div class="icondive"><img src="images/icons/call.svg" alt="icon"></div>
+                  <div class="icondive"><img src="{{ asset('assets/open') }}/images/icons/call.svg" alt="icon"></div>
                   <div class="media-body getintouchinfo">
-                    <a href="tel:123456790">+91-123 4567 890 <span>Mon-Fri 9am - 6pm</span></a>
+                    <a href="tel:{{ config('hydro.phone.call') }}">{{ config('hydro.phone.call') }} <span>Mon-Fri 9am - 6pm</span></a>
                   </div>
                 </div>
                 <div class="media mt15">
-                  <div class="icondive"><img src="images/icons/whatsapp.svg" alt="icon"></div>
+                  <div class="icondive"><img src="{{ asset('assets/open') }}/images/icons/whatsapp.svg" alt="icon"></div>
                   <div class="media-body getintouchinfo">
-                    <a href="tel:123456790">+91-123 4567 890 <span>Mon-Fri 9am - 6pm</span></a>
+                    <a href="tel:{{ config('hydro.phone.whatsapp') }}">{{ config('hydro.phone.whatsapp') }} <span>Mon-Fri 9am - 6pm</span></a>
                   </div>
                 </div>
                 <div class="media mt15">
-                  <div class="icondive"><img src="images/icons/mail.svg" alt="icon"></div>
+                  <div class="icondive"><img src="{{ asset('assets/open') }}/images/icons/mail.svg" alt="icon"></div>
                   <div class="media-body getintouchinfo">
-                    <a href="mailto:info@website.com">info@website.com <span>Online Support</span></a>
+                    <a href="mailto:{{ config('hydro.email.support') }}">{{ config('hydro.email.support') }} <span>Online Support</span></a>
                   </div>
                 </div>
                 <div class="media mt15">
-                  <div class="icondive"><img src="images/icons/map.svg" alt="icon"></div>
+                  <div class="icondive"><img src="{{ asset('assets/open') }}/images/icons/map.svg" alt="icon"></div>
                   <div class="media-body getintouchinfo">
-                    <a href="mailto:info@website.com">Jaipur, Rajasthan, India<span>Visit Our Office</span></a>
+                    <a href="mailto:{{ config('hydro.email.info') }}">Awka, Anamabra, Nigeria<span>Visit Our Office</span></a>
                   </div>
                 </div>
               </div>
               <div class="contact-data mt30">
                 <h4>Follow Us On:</h4>
                 <div class="social-media-linkz mt10">
-                  <a href="javascript:void(0)" target="blank"><i class="fab fa-facebook"></i></a>
+                  <a href="{{ config('hydro.links.facebook') }}" target="blank"><i class="fab fa-facebook"></i></a>
                   <a href="javascript:void(0)" target="blank"><i class="fab fa-twitter"></i></a>
                   <a href="javascript:void(0)" target="blank"><i class="fab fa-instagram"></i></a>
                   <a href="javascript:void(0)" target="blank"><i class="fab fa-linkedin"></i></a>

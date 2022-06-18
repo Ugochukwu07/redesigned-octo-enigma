@@ -58,6 +58,8 @@
 </section>
 <!--End About-->
 
+@include('layouts.widgets.services')
+
 <!--Start Service-->
 <section class="service-section web-servic pad-tb" id="services">
     <div class="container">
@@ -263,49 +265,7 @@
     </section>
     <!--End Portfolio-->
 
-    <!--Start Clients-->
-    <section class="clients-section pad-tb">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="common-heading">
-                        <span>Our happy customers</span>
-                        <h2>Some of our Clients</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="opl">
-                        <ul>
-                            <li class=" wow fadeIn" data-wow-delay=".2s">
-                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-1.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-                            </li>
-                            <li class=" wow fadeIn" data-wow-delay=".4s">
-                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-2.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-                            </li>
-                            <li class=" wow fadeIn" data-wow-delay=".6s">
-                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-3.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-                            </li>
-                            <li class=" wow fadeIn" data-wow-delay=".8s">
-                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-4.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-                            </li>
-                            <li class=" wow fadeIn" data-wow-delay="1s">
-                                <div class="clients-logo"><img src="{{ asset('assets/open/') }}/images/me/client-5.jpg" alt="text" class="img-fluid rounded-circle"/></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="-cta-btn mt70">
-                <div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.2s">
-                    <p>We <span>Promise.</span> We <span>Deliver.</span></p>
-                    <a href="{{ route('contact', ['purpose' => 'all']) }}" class="btn-main bg-btn2 lnk">Let's Work Together<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Clients-->
+    @include('layouts.widgets.our-clients')
 
     <!--Start work-category-->
     <section class="work-category pad-tb tilt3d">

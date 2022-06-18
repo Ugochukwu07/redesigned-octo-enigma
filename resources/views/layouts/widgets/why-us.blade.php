@@ -13,7 +13,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-4 col-sm-6 mt30  wow fadeIn" data-wow-delay=".2s">
           <div class="s-block wide-sblock">
-            <div class="s-card-icon"><img src="{{ asset('assets/open/images/service/why-1.jpg') }}" alt="service" class="img-fluid"></div>
+            <div class="s-card-icon"><img src="{{ asset('assets/open/images/icons/teama.svg') }}" alt="service" class="img-fluid"></div>
             <div class="s-block-content">
               <h4>Reliable Service. In House Team</h4>
               <p>Our team is like a close family, our clients are like relatives. We make sure that we are reliable.</p>
@@ -22,7 +22,7 @@
         </div>
         <div class="col-lg-4 col-sm-6 mt30 wow fadeIn" data-wow-delay=".5s">
           <div class="s-block wide-sblock">
-            <div class="s-card-icon"><img src="{{ asset('assets/open/images/service/why-2.jpg') }}" alt="service" class="img-fluid"></div>
+            <div class="s-card-icon"><img src="{{ asset('assets/open/images/icons/link.svg') }}" alt="service" class="img-fluid"></div>
             <div class="s-block-content">
               <h4>Trusted by People Like You</h4>
               <p>We're very open about how we work. We give to collaboration tools like Slack or Github</p>
